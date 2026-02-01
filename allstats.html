@@ -4,6 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>League Statistics - Winter Golf League</title>
     <link rel="stylesheet" href="./allstats_files/style.css">
+    <link rel="stylesheet" href="mobile.css">
 <style type="text/css">/* Copyright 2014-present Evernote Corporation. All rights reserved. */
 @keyframes caretBlink {
     from { opacity: 1.0; }
@@ -255,11 +256,12 @@
                 <p class="text-muted" style="margin: 0;">These rounds are used to calculate player handicaps.</p>
                 <button class="btn btn-sm btn-outline-primary" disabled title="Admin only">📊 Export Rounds</button>
             </div>
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Date</th>
-                        <th>Player</th>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Player</th>
                         <th>Course</th>
                         <th>Holes</th>
                         <th>Score</th>
@@ -713,8 +715,8 @@
                     
                 </tbody>
             </table>
+            </div>
         </div>
-    </div>
 
     <div id="scores" class="tab-content" style="display:none;">
         <div class="card">
@@ -723,11 +725,12 @@
                 <p class="text-muted" style="margin: 0;">Scores from weekly league competition.</p>
                 <button class="btn btn-sm btn-outline-primary" disabled title="Admin only">📊 Export Scores</button>
             </div>
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Week</th>
-                        <th>Player</th>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>Player</th>
                         <th>Gross</th>
                         <th>Hcp Applied</th>
                         <th>Net</th>
@@ -810,6 +813,7 @@
                     
                 </tbody>
             </table>
+            </div>
         </div>
     </div>
 </div>
