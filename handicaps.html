@@ -228,6 +228,29 @@
             <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
         </div>
     </footer>
+
+<script>
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a");
+  if (!a) return;
+
+  const href = (a.getAttribute("href") || "").trim();
+  const allowed = [
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","week_1.html","#",""
+  ];
+
+  if (
+    href.startsWith("/") ||
+    (!allowed.includes(href) && !href.endsWith(".html") && href !== "#")
+  ) {
+    e.preventDefault();
+    a.classList.add("disabled","admin-only");
+    a.setAttribute("aria-disabled","true");
+  }
+});
+</script>
 </body>
 
 </html>

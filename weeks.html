@@ -35,8 +35,8 @@
 <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
     <h1>Competition Weeks</h1>
     <div class="header-actions">
-        <a href="/weeks/export" class="btn btn-secondary">📊 Export to Excel</a>
-        <a href="/weeks/setup" class="btn btn-primary">+ Set Up New Week</a>
+        <a href="#" class="btn btn-secondary disabled admin-only">📊 Export to Excel (Admin only)</a>
+        <a href="#" class="btn btn-primary disabled admin-only">+ Set Up New Week (Admin only)</a>
     </div>
 </div>
 
@@ -61,9 +61,8 @@
                 <td>52</td>
                 <td>13</td>
                 <td>
-                    <a href="week_1.html" class="btn btn-sm">View
-                        Results</a>
-                    <a href="/weeks/9/scores" class="btn btn-sm">Enter Scores</a>
+                    <a href="week_1.html" class="btn btn-sm">View Results</a>
+                    <a href="#" class="btn btn-sm disabled admin-only">Enter Scores (Admin only)</a>
                     <form method="POST"
                         style="display: inline;"
                         onsubmit="return confirm('Are you sure you want to delete this week? This will delete all entries, scores, and results.');">
@@ -83,6 +82,29 @@
             <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
         </div>
     </footer>
+
+<script>
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("a");
+  if (!a) return;
+
+  const href = (a.getAttribute("href") || "").trim();
+  const allowed = [
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","week_1.html","#",""
+  ];
+
+  if (
+    href.startsWith("/") ||
+    (!allowed.includes(href) && !href.endsWith(".html") && href !== "#")
+  ) {
+    e.preventDefault();
+    a.classList.add("disabled","admin-only");
+    a.setAttribute("aria-disabled","true");
+  }
+});
+</script>
 </body>
 
 </html>
