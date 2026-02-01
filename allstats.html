@@ -884,10 +884,29 @@
         document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
 
         // Show selected tab
-        document.getElementById(tabName).style.display = 'block';
-        // Add active class to button
+        var tabElement = document.getElementById(tabName);
+        if (tabElement) {
+            tabElement.style.display = 'block';
+        }
+        
+        // Add active class to the clicked button
         event.target.classList.add('active');
     }
+    
+    // Ensure first tab is active on page load
+    window.addEventListener('DOMContentLoaded', function() {
+        var firstTab = document.getElementById('rounds');
+        if (firstTab) {
+            firstTab.style.display = 'block';
+        }
+        var firstBtn = document.querySelector('.tab-btn.active');
+        if (!firstBtn) {
+            var buttons = document.querySelectorAll('.tab-btn');
+            if (buttons.length > 0) {
+                buttons[0].classList.add('active');
+            }
+        }
+    });
 </script>
 
     </main>
