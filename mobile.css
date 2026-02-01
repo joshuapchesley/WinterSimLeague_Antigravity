@@ -40,6 +40,28 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 768px) {
   body { font-size: 16px; }
   .container { padding: 12px; }
-  .navbar .container { flex-direction: column; align-items: flex-start; }
+
+  /* Keep header compact */
+  .navbar .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Horizontal, swipeable nav */
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links a {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+
   .view-only-banner { margin: 10px 12px; }
+}
+
 }
