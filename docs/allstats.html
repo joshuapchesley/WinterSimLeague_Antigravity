@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League Statistics - Winter Golf League</title>
+    
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+    
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+    
+    <!-- Page Layout: Navigation, Footer -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+    
+    <!-- Responsive Overrides -->
+    <link rel="stylesheet" href="mobile.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="weeks.html">Weeks</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="handicaps.html">Handicaps</a></li>
+                <li><a href="coursepars.html">Course Pars</a></li>
+                <li><a href="allstats.html">Stats</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        
+        
+
+        
+
+<div class="page-header">
+    <div>
+        <h1>League Statistics</h1>
+        <p class="text-secondary" style="margin: 0; font-size: var(--font-size-sm);">Database integrity and historical data</p>
+    </div>
+    <div class="header-actions">
+        <a href="#" class="disabled admin-only">Export Summary (Admin only)</a>
+        <a href="#" class="disabled admin-only">Add Round (Admin only)</a>
+    </div>
+</div>
+
+<!-- STATS CARDS -->
+<div class="grid grid-auto" style="margin-bottom: var(--space-12);">
+    <div class="stat-card">
+        <div class="stat-card-value">10</div>
+        <div class="stat-card-label">Players</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-card-value">1</div>
+        <div class="stat-card-label">Weeks</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-card-value">8</div>
+        <div class="stat-card-label">League Scores</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-card-value">29</div>
+        <div class="stat-card-label">Handicap Rounds</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-card-value">9</div>
+        <div class="stat-card-label">Handicap Updates</div>
+    </div>
+</div>
+
+<!-- TABBED DATA SECTION -->
+<div style="border-bottom: 2px solid var(--color-border); margin-bottom: var(--space-6);">
+    <div class="btn-group" style="display: flex; gap: 0; flex-wrap: wrap;">
+        <button class="tab-btn active" onclick="openTab(event, 'rounds')" style="
+            border: none;
+            background: none;
+            padding: var(--space-4) var(--space-6);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text-secondary);
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: var(--letter-spacing-wide);
+            font-size: var(--font-size-sm);
+            margin-bottom: -2px;
+        ">Handicap Rounds</button>
+        <button class="tab-btn" onclick="openTab(event, 'scores')" style="
+            border: none;
+            background: none;
+            padding: var(--space-4) var(--space-6);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text-secondary);
+            border-bottom: 3px solid transparent;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: var(--letter-spacing-wide);
+            font-size: var(--font-size-sm);
+            margin-bottom: -2px;
+        ">Weekly Scores</button>
+    </div>
+</div>
+
+<!-- ROUNDS TAB -->
+<div id="rounds" class="tab-content" style="display: block;">
+    <div class="card">
+        <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-6); flex-wrap: wrap; gap: var(--space-3);">
+                <p style="margin: 0; color: var(--color-text-secondary);">Stroke play rounds used for handicap calculations.</p>
+                <a href="#" class="disabled admin-only">Export Rounds (Admin only)</a>
+            </div>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Player</th>
+                            <th>Course</th>
+                            <th class="numeric">Holes</th>
+                            <th class="numeric">Score</th>
+                            <th>Rating/Slope</th>
+                            <th class="numeric">Differential</th>
+                            <th style="text-align: center;">Used</th>
+                            <th style="width: 70px; text-align: right;">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Beers</strong></td>
+                                <td>DPC Scottsdale</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>40</strong></td>
+                                <td>36.8 / 68</td>
+                                <td class="numeric">5.3</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Tory</strong></td>
+                                <td>DPC Scottsdale</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>42</strong></td>
+                                <td>37.4 / 68</td>
+                                <td class="numeric">7.6</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Beers</strong></td>
+                                <td>Pine Needles GC</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>40</strong></td>
+                                <td>36.8 / 68</td>
+                                <td class="numeric">5.3</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Tory</strong></td>
+                                <td>Pine Needles GC</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>47</strong></td>
+                                <td>36.8 / 68</td>
+                                <td class="numeric">17.0</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Tory</strong></td>
+                                <td>Pine Needles GC</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>47</strong></td>
+                                <td>36.8 / 68</td>
+                                <td class="numeric">17.0</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Beers</strong></td>
+                                <td>Pine Needles GC</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>38</strong></td>
+                                <td>36.8 / 68</td>
+                                <td class="numeric">2.0</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Kolby</strong></td>
+                                <td>Pine Needles GC</td>
+                                <td class="numeric">18</td>
+                                <td class="numeric"><strong>66</strong></td>
+                                <td>73.5 / 135</td>
+                                <td class="numeric">-6.3</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Darrell</strong></td>
+                                <td>Pine Needles GC</td>
+                                <td class="numeric">18</td>
+                                <td class="numeric"><strong>77</strong></td>
+                                <td>73.5 / 135</td>
+                                <td class="numeric">2.9</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-02-01</td>
+                                <td><strong>Kolby</strong></td>
+                                <td>Belvedere Golf Club</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>38</strong></td>
+                                <td>36.1 / 65</td>
+                                <td class="numeric">3.3</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-30</td>
+                                <td><strong>Chez</strong></td>
+                                <td>Minnehaha Country Club</td>
+                                <td class="numeric">18</td>
+                                <td class="numeric"><strong>82</strong></td>
+                                <td>71.3 / 132</td>
+                                <td class="numeric">9.2</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-30</td>
+                                <td><strong>Tony</strong></td>
+                                <td>Minnehaha Country Club</td>
+                                <td class="numeric">18</td>
+                                <td class="numeric"><strong>79</strong></td>
+                                <td>71.3 / 132</td>
+                                <td class="numeric">6.6</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-28</td>
+                                <td><strong>Beers</strong></td>
+                                <td>Castle Pines Golf Club</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>38</strong></td>
+                                <td>36.0 / 74</td>
+                                <td class="numeric">3.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-28</td>
+                                <td><strong>Beers</strong></td>
+                                <td>Castle Pines Golf Club</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>43</strong></td>
+                                <td>36.0 / 74</td>
+                                <td class="numeric">10.7</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Chez</strong></td>
+                                <td>Bay Harbor Golf Club Links - Quarry</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>43</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">14.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Aaron</strong></td>
+                                <td>Bay Harbor Golf Club Links - Quarry</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>38</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">4.0</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Eric</strong></td>
+                                <td>Bay Harbor Golf Club Links - Quarry</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>37</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">2.0</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Tony</strong></td>
+                                <td>Bay Harbor Golf Club Links - Quarry</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>46</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">20.2</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Aaron</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>42</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">12.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Chez</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>44</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">16.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Eric</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>36</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">0.0</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Tony</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>39</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">6.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Kolby</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>37</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">2.0</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Darrell</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>44</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">16.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Aaron</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>39</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">6.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Chez</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>47</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">22.2</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Eric</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>44</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">16.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Tony</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>43</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">14.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Kolby</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>44</strong></td>
+                                <td>36.0 / 56</td>
+                                <td class="numeric">16.1</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td>2026-01-23</td>
+                                <td><strong>Darrell</strong></td>
+                                <td>DPC Louisiana</td>
+                                <td class="numeric">9</td>
+                                <td class="numeric"><strong>44</strong></td>
+                                <td>36.0 / 57</td>
+                                <td class="numeric">15.9</td>
+                                <td style="text-align: center;">
+                                    
+                                </td>
+                                <td style="text-align: right;">
+                                    <form method="get" action="#" onsubmit="return confirm('Delete this round?');" style="display: inline;">
+                                        <button type="submit" class="btn btn-sm btn-danger" disabled disabled>(Admin only) Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SCORES TAB -->
+<div id="scores" class="tab-content" style="display: none;">
+    <div class="card">
+        <div class="card-body">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-6); flex-wrap: wrap; gap: var(--space-3);">
+                <p style="margin: 0; color: var(--color-text-secondary);">All scores from weekly league competition.</p>
+                <a href="#" class="disabled admin-only">Export Scores (Admin only)</a>
+            </div>
+            <div class="table-wrap">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Week</th>
+                            <th>Player</th>
+                            <th class="numeric">Gross</th>
+                            <th class="numeric">Hcp</th>
+                            <th class="numeric">Net</th>
+                            <th class="numeric">Points</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Aaron</td>
+                                <td class="numeric"><strong>51</strong></td>
+                                <td class="numeric">0.43</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">50.57</td>
+                                <td class="numeric"><strong>5</strong></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Kolby</td>
+                                <td class="numeric"><strong>51</strong></td>
+                                <td class="numeric">0.43</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">50.57</td>
+                                <td class="numeric"><strong>5</strong></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Darrell</td>
+                                <td class="numeric"><strong>52</strong></td>
+                                <td class="numeric">0.0</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">52.0</td>
+                                <td class="numeric"><strong>4</strong></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Eric</td>
+                                <td class="numeric"><strong>52</strong></td>
+                                <td class="numeric">0.0</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">52.0</td>
+                                <td class="numeric"><strong>4</strong></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Beers</td>
+                                <td class="numeric"><strong>54</strong></td>
+                                <td class="numeric">0.65</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">53.35</td>
+                                <td class="numeric"><strong>3</strong></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Tony</td>
+                                <td class="numeric"><strong>54</strong></td>
+                                <td class="numeric">0.65</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">53.35</td>
+                                <td class="numeric"><strong>3</strong></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Chez</td>
+                                <td class="numeric"><strong>60</strong></td>
+                                <td class="numeric">1.41</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">58.59</td>
+                                <td class="numeric"><strong>2</strong></td>
+                            </tr>
+                            
+                            <tr>
+                                <td><strong>Week 1</strong></td>
+                                <td>Tory</td>
+                                <td class="numeric"><strong>60</strong></td>
+                                <td class="numeric">1.41</td>
+                                <td class="numeric" style="color: var(--color-primary-600); font-weight: bold;">58.59</td>
+                                <td class="numeric"><strong>2</strong></td>
+                            </tr>
+                            
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .tab-btn.active {
+        color: var(--color-primary-600);
+        border-bottom-color: var(--color-primary-600) !important;
+    }
+</style>
+
+<script>
+    function openTab(evt, tabName) {
+        document.querySelectorAll('.tab-content').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+        document.getElementById(tabName).style.display = 'block';
+        evt.currentTarget.classList.add('active');
+    }
+</script>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
+        </div>
+    </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    
+    const href = (a.getAttribute("href") || "").trim();
+    
+    // FIRST: Check for View Results exception by class
+    if(a.classList.contains("view-results-link")) {
+      return; // Allow View Results links to navigate
+    }
+    
+    // Allow per-week results pages (week_<n>.html pattern)
+    if(/^week_\d+\.html$/.test(href)) {
+      return; // Allow per-week results links
+    }
+    
+    // Allow fallback week_results.html
+    if(href === "week_results.html") {
+      return; // Allow fallback results page
+    }
+    
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
+</body>
+
+</html>

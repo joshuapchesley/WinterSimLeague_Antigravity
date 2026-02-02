@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Course Pars - Winter Golf League</title>
+    
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+    
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+    
+    <!-- Page Layout: Navigation, Footer -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+    
+    <!-- Responsive Overrides -->
+    <link rel="stylesheet" href="mobile.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="weeks.html">Weeks</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="handicaps.html">Handicaps</a></li>
+                <li><a href="coursepars.html">Course Pars</a></li>
+                <li><a href="allstats.html">Stats</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        
+        
+
+        
+<div class="page-header">
+    <h1>Course Hole Pars</h1>
+    <p class="text-secondary">Set par for each hole to enable automatic par calculation and dynamic scoring</p>
+</div>
+
+<div class="card">
+    <form method="get" class="form">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="course_name">Course Name <span class="required">*</span></label>
+                <input type="text" name="course_name" id="course_name" required class="form-control" placeholder="e.g., Pebble Beach">
+            </div>
+            <div class="form-group">
+                <label for="tee_name">Tee Name</label>
+                <input type="text" name="tee_name" id="tee_name" class="form-control" placeholder="e.g., Blue Tee">
+                <p class="form-help-text">Optional: Blue, White, Red, etc.</p>
+            </div>
+        </div>
+
+        <div class="hole-par-grid">
+            
+            <div class="hole-par-input">
+                <label for="hole_1">Hole 1</label>
+                <input type="number" id="hole_1" name="hole_1" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_2">Hole 2</label>
+                <input type="number" id="hole_2" name="hole_2" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_3">Hole 3</label>
+                <input type="number" id="hole_3" name="hole_3" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_4">Hole 4</label>
+                <input type="number" id="hole_4" name="hole_4" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_5">Hole 5</label>
+                <input type="number" id="hole_5" name="hole_5" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_6">Hole 6</label>
+                <input type="number" id="hole_6" name="hole_6" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_7">Hole 7</label>
+                <input type="number" id="hole_7" name="hole_7" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_8">Hole 8</label>
+                <input type="number" id="hole_8" name="hole_8" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_9">Hole 9</label>
+                <input type="number" id="hole_9" name="hole_9" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_10">Hole 10</label>
+                <input type="number" id="hole_10" name="hole_10" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_11">Hole 11</label>
+                <input type="number" id="hole_11" name="hole_11" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_12">Hole 12</label>
+                <input type="number" id="hole_12" name="hole_12" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_13">Hole 13</label>
+                <input type="number" id="hole_13" name="hole_13" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_14">Hole 14</label>
+                <input type="number" id="hole_14" name="hole_14" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_15">Hole 15</label>
+                <input type="number" id="hole_15" name="hole_15" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_16">Hole 16</label>
+                <input type="number" id="hole_16" name="hole_16" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_17">Hole 17</label>
+                <input type="number" id="hole_17" name="hole_17" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+            <div class="hole-par-input">
+                <label for="hole_18">Hole 18</label>
+                <input type="number" id="hole_18" name="hole_18" class="form-control" min="3" max="5" value="4">
+            </div>
+            
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary" disabled>Save Pars</button>
+        </div>
+    </form>
+</div>
+
+<h2>Existing Courses</h2>
+<div class="card">
+    
+    <div class="table-wrap">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Tee</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td><strong>Belvedere Golf Club</strong></td>
+                    <td>Blue</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('Belvedere Golf Club', 'Blue', '{"1": 4, "2": 4, "3": 4, "4": 3, "5": 5, "6": 4, "7": 4, "8": 3, "9": 5, "10": 5, "11": 4, "12": 4, "13": 4, "14": 3, "15": 5, "16": 4, "17": 3, "18": 4}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>Castle Pines Golf Club</strong></td>
+                    <td>Blue</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('Castle Pines Golf Club', 'Blue', '{"1": 5, "2": 4, "3": 4, "4": 3, "5": 4, "6": 4, "7": 3, "8": 5, "9": 4, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 4, "17": 3, "18": 4}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>DPC Scottsdale</strong></td>
+                    <td>Blue</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('DPC Scottsdale', 'Blue', '{"1": 4, "2": 4, "3": 5, "4": 3, "5": 4, "6": 4, "7": 3, "8": 4, "9": 4, "10": 4, "11": 4, "12": 3, "13": 5, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>Minnehaha Country Club</strong></td>
+                    <td>Blue</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('Minnehaha Country Club', 'Blue', '{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>Minnehaha Country Club</strong></td>
+                    <td>Yellow</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('Minnehaha Country Club', 'Yellow', '{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>ParMar Valley Country Club</strong></td>
+                    <td>Blue</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('ParMar Valley Country Club', 'Blue', '{"1": 4, "2": 3, "3": 5, "4": 4, "5": 4, "6": 3, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 5, "13": 4, "14": 4, "15": 3, "16": 4, "17": 3, "18": 5}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>Pine Needles Lodge and Golf Club</strong></td>
+                    <td>Blue</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('Pine Needles Lodge and Golf Club', 'Blue', '{"1": 5, "2": 4, "3": 3, "4": 4, "5": 3, "6": 4, "7": 4, "8": 4, "9": 4, "10": 5, "11": 4, "12": 4, "13": 3, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>Torrey South</strong></td>
+                    <td>Blue</td>
+                    <td><span class="badge badge-success">Saved</span></td>
+                    <td>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="loadCourse('Torrey South', 'Blue', '{"1": 4, "2": 4, "3": 3, "4": 4, "5": 4, "6": 5, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 3, "17": 4, "18": 5}')" disabled>(Admin only) Edit</button>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+
+<script>
+    function loadCourse(name, tee, parsJson) {
+        const pars = JSON.parse(parsJson);
+        document.getElementById('course_name').value = name;
+        document.getElementById('tee_name').value = tee;
+        for (let h in pars) {
+            const input = document.querySelector('input[name="hole_' + h + '"]');
+            if (input) input.value = pars[h];
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
+        </div>
+    </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    
+    const href = (a.getAttribute("href") || "").trim();
+    
+    // FIRST: Check for View Results exception by class
+    if(a.classList.contains("view-results-link")) {
+      return; // Allow View Results links to navigate
+    }
+    
+    // Allow per-week results pages (week_<n>.html pattern)
+    if(/^week_\d+\.html$/.test(href)) {
+      return; // Allow per-week results links
+    }
+    
+    // Allow fallback week_results.html
+    if(href === "week_results.html") {
+      return; // Allow fallback results page
+    }
+    
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
+</body>
+
+</html>
