@@ -61,8 +61,7 @@
                 <td>52</td>
                 <td>13</td>
                 <td>
-                    <a href="week_results.html" class="btn btn-sm">View
-                        Results</a>
+                    <a href="week_results.html" class="view-results-link btn btn-sm">View Results</a>
                     <a href="#" class="disabled admin-only">Enter Scores (Admin only)</a>
                     <form method="get" action="#"
                         style="display: inline;"
@@ -95,8 +94,8 @@
     const a = e.target.closest("a");
     if(!a) return;
     
-    // Special case: "View Results" links must always work
-    if(a.textContent.toLowerCase().includes("view") && a.textContent.toLowerCase().includes("results")) {
+    // FIRST: Check for View Results exception by class or href
+    if(a.classList.contains("view-results-link") || a.getAttribute("href") === "week_results.html") {
       return; // Allow View Results links to navigate
     }
     

@@ -146,8 +146,8 @@
     const a = e.target.closest("a");
     if(!a) return;
     
-    // Special case: "View Results" links must always work
-    if(a.textContent.toLowerCase().includes("view") && a.textContent.toLowerCase().includes("results")) {
+    // FIRST: Check for View Results exception by class or href
+    if(a.classList.contains("view-results-link") || a.getAttribute("href") === "week_results.html") {
       return; // Allow View Results links to navigate
     }
     
