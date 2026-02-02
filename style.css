@@ -632,3 +632,15 @@ small {
     color: var(--text-light);
     font-size: 0.875rem;
 }
+
+/* Admin-only and disabled links (static site enforcement) */
+.disabled, .admin-only {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+a.disabled, a.admin-only {
+  color: #999 !important;
+}

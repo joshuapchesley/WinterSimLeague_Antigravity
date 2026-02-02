@@ -1,5 +1,5 @@
 /* --- baseline --- */
-html, body { max-width: 100%; overflow-x: hidden; }
+html, body { max-width: 100%; overflow-x: visible; }
 img { max-width: 100%; height: auto; }
 .container { max-width: 1100px; margin: 0 auto; padding: 16px; }
 
@@ -75,4 +75,16 @@ img { max-width: 100%; height: auto; }
   }
 
   .view-only-banner { margin: 10px 12px; }
+}
+
+/* --- Admin-only and disabled links (static site enforcement) --- */
+.disabled, .admin-only {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+a.disabled, a.admin-only {
+  color: #999 !important;
 }
