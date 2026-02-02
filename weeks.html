@@ -61,7 +61,7 @@
                 <td>52</td>
                 <td>13</td>
                 <td>
-                    <a href="week_1.html" class="btn btn-sm">View
+                    <a href="week_results.html" class="btn btn-sm">View
                         Results</a>
                     <a href="#" class="disabled admin-only">Enter Scores (Admin only)</a>
                     <form method="get" action="#"
@@ -94,6 +94,12 @@
   document.addEventListener("click", function(e){
     const a = e.target.closest("a");
     if(!a) return;
+    
+    // Special case: "View Results" links must always work
+    if(a.textContent.toLowerCase().includes("view") && a.textContent.toLowerCase().includes("results")) {
+      return; // Allow View Results links to navigate
+    }
+    
     const href = (a.getAttribute("href") || "").trim();
     if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
       e.preventDefault(); a.classList.add("disabled","admin-only");

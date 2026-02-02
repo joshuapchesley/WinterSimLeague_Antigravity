@@ -1044,6 +1044,12 @@
   document.addEventListener("click", function(e){
     const a = e.target.closest("a");
     if(!a) return;
+    
+    // Special case: "View Results" links must always work
+    if(a.textContent.toLowerCase().includes("view") && a.textContent.toLowerCase().includes("results")) {
+      return; // Allow View Results links to navigate
+    }
+    
     const href = (a.getAttribute("href") || "").trim();
     if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
       e.preventDefault(); a.classList.add("disabled","admin-only");
