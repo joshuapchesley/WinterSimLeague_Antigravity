@@ -40,7 +40,7 @@
 </div>
 
 <div class="card">
-    <form method="POST" class="form">
+    <form method="get" class="form">
         <div class="form-row">
             <div class="form-group">
                 <label for="course_name">Course Name *</label>
@@ -234,7 +234,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="Belvedere Golf Club"
                         data-tee="Blue" data-pars='{"1": 4, "2": 4, "3": 4, "4": 3, "5": 5, "6": 4, "7": 4, "8": 3, "9": 5, "10": 5, "11": 4, "12": 4, "13": 4, "14": 3, "15": 5, "16": 4, "17": 3, "18": 4}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -285,7 +285,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="Castle Pines Golf Club"
                         data-tee="Blue" data-pars='{"1": 5, "2": 4, "3": 4, "4": 3, "5": 4, "6": 4, "7": 3, "8": 5, "9": 4, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 4, "17": 3, "18": 4}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -336,7 +336,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="DPC Scottsdale"
                         data-tee="Blue" data-pars='{"1": 4, "2": 4, "3": 5, "4": 3, "5": 4, "6": 4, "7": 3, "8": 4, "9": 4, "10": 4, "11": 4, "12": 3, "13": 5, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -387,7 +387,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="Minnehaha Country Club"
                         data-tee="Blue" data-pars='{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -438,7 +438,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="Minnehaha Country Club"
                         data-tee="Yellow" data-pars='{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -489,7 +489,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="ParMar Valley Country Club"
                         data-tee="Blue" data-pars='{"1": 4, "2": 3, "3": 5, "4": 4, "5": 4, "6": 3, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 5, "13": 4, "14": 4, "15": 3, "16": 4, "17": 3, "18": 5}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -540,7 +540,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="Pine Needles Lodge and Golf Club"
                         data-tee="Blue" data-pars='{"1": 5, "2": 4, "3": 3, "4": 4, "5": 3, "6": 4, "7": 4, "8": 4, "9": 4, "10": 5, "11": 4, "12": 4, "13": 3, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -591,7 +591,7 @@
                 <td>
                     <button class="btn btn-sm btn-secondary" data-course="Torrey South"
                         data-tee="Blue" data-pars='{"1": 4, "2": 4, "3": 3, "4": 4, "5": 4, "6": 5, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 3, "17": 4, "18": 5}'
-                        onclick="applyEdit(this)">Edit</button>
+                        onclick="applyEdit(this)" disabled>(Admin only) Edit</button>
                 </td>
             </tr>
             
@@ -626,6 +626,37 @@
             <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
         </div>
     </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    const href = (a.getAttribute("href") || "").trim();
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
 </body>
 
 </html>

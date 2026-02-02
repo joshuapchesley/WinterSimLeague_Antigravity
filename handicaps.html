@@ -35,9 +35,9 @@
 <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
     <h1>Player Handicaps</h1>
     <div class="header-actions">
-        <a href="/handicaps/export" class="btn btn-secondary">📊 Export</a>
-        <a href="/commissioner/handicap" class="btn btn-secondary">👑 Commissioner Override</a>
-        <a href="/rounds/add" class="btn btn-primary">+ Add Round</a>
+        <a href="#" class="disabled admin-only">class="btn btn-secondary" (Admin only)</a>
+        <a href="#" class="disabled admin-only">class="btn btn-secondary" (Admin only)</a>
+        <a href="#" class="disabled admin-only">class="btn btn-primary" (Admin only)</a>
     </div>
 </div>
 
@@ -162,10 +162,10 @@
                     <span class="suggested-value">-1.1</span>
 
                     
-                    <form
-                        method="post" style="display:inline;">
+                    <form action="#"
+                        method="get" style="display:inline;">
                         <button type="submit" class="btn btn-sm btn-outline-primary"
-                            title="Update official handicap to suggested value" disabled>Update</button>
+                            title="Update official handicap to suggested value" disabled disabled>(Admin only) Update</button>
                     </form>
                     
                     
@@ -232,6 +232,37 @@
             <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
         </div>
     </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    const href = (a.getAttribute("href") || "").trim();
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
 </body>
 
 </html>

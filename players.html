@@ -35,8 +35,8 @@
 <div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
     <h1>Players</h1>
     <div class="header-actions">
-        <a href="/players/export" class="btn btn-secondary">📊 Export to Excel</a>
-        <a href="/players/add" class="btn btn-primary">+ Add Player</a>
+        <a href="#" class="disabled admin-only">class="btn btn-secondary" (Admin only)</a>
+        <a href="#" class="disabled admin-only">class="btn btn-primary" (Admin only)</a>
     </div>
 </div>
 
@@ -57,7 +57,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -74,7 +74,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -91,7 +91,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -108,7 +108,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -125,7 +125,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -142,7 +142,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -159,7 +159,7 @@
                     
                     <span class="badge badge-secondary" style="background-color: #6c757d;">Inactive</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -176,7 +176,7 @@
                     
                     <span class="badge badge-secondary" style="background-color: #6c757d;">Inactive</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -193,7 +193,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -210,7 +210,7 @@
                     
                     <span class="badge badge-success">Active</span>
                     
-                    <form method="POST"
+                    <form action="#" method="get"
                         style="display:inline; margin-left: 10px;">
                         <button type="submit" class="btn-sm"
                             style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
@@ -232,6 +232,37 @@
             <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
         </div>
     </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    const href = (a.getAttribute("href") || "").trim();
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
 </body>
 
 </html>

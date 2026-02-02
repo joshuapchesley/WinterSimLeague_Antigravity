@@ -41,9 +41,9 @@
     <div class="card">
         <h2>🏌️ Quick Actions</h2>
         <ul class="action-list">
-            <li><a href="/players/add" class="btn btn-primary">Add New Player</a></li>
-            <li><a href="/weeks/setup" class="btn btn-primary">Set Up New Week</a></li>
-            <li><a href="/rounds/add" class="btn btn-primary">Add Stroke Play Round</a></li>
+            <li><a href="#" class="disabled admin-only">class="btn btn-primary" (Admin only)</a></li>
+            <li><a href="#" class="disabled admin-only">class="btn btn-primary" (Admin only)</a></li>
+            <li><a href="#" class="disabled admin-only">class="btn btn-primary" (Admin only)</a></li>
         </ul>
     </div>
 
@@ -69,7 +69,7 @@
 <div class="card" style="margin-bottom: 2rem;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
         <h2 style="margin-bottom: 0;">🤝 Suggested Next Matchups</h2>
-        <form method="post" style="display: inline;">
+        <form action="#" method="get" style="display: inline;">
             <button type="submit" class="btn btn-sm btn-outline-primary" disabled>Shuffle Pairings</button>
         </form>
     </div>
@@ -141,6 +141,37 @@
             <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
         </div>
     </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    const href = (a.getAttribute("href") || "").trim();
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
 </body>
 
 </html>
