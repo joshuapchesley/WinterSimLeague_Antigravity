@@ -122,7 +122,7 @@
 </div>
 
 <div class="form-actions">
-    <a href="#" class="btn btn-primary disabled admin-only">📊 Export to Excel (Admin only)</a>
+    <a href="/weeks/9/export" class="btn btn-primary">📊 Export to Excel</a>
     <a href="leaderboard.html" class="btn btn-secondary">View Season Leaderboard</a>
     <a href="weeks.html" class="btn btn-secondary">Back to Weeks</a>
 </div>
@@ -134,29 +134,6 @@
             <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
         </div>
     </footer>
-
-<script>
-document.addEventListener("click", (e) => {
-  const a = e.target.closest("a");
-  if (!a) return;
-
-  const href = (a.getAttribute("href") || "").trim();
-  const allowed = [
-    "index.html","players.html","weeks.html","leaderboard.html",
-    "handicaps.html","coursepars.html","allstats.html","rules.html",
-    "week_results.html","week_1.html","#",""
-  ];
-
-  if (
-    href.startsWith("/") ||
-    (!allowed.includes(href) && !href.endsWith(".html") && href !== "#")
-  ) {
-    e.preventDefault();
-    a.classList.add("disabled","admin-only");
-    a.setAttribute("aria-disabled","true");
-  }
-});
-</script>
 </body>
 
 </html>
