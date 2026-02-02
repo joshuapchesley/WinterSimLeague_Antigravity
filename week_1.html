@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 1 Results - Winter Golf League</title>
+    
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+    
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+    
+    <!-- Page Layout: Navigation, Footer -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+    
+    <!-- Responsive Overrides -->
     <link rel="stylesheet" href="mobile.css">
+
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">⛳ Winter Golf League</h1>
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="players.html">Players</a></li>
@@ -20,7 +36,7 @@
                 <li><a href="leaderboard.html">Leaderboard</a></li>
                 <li><a href="handicaps.html">Handicaps</a></li>
                 <li><a href="coursepars.html">Course Pars</a></li>
-                <li><a href="allstats.html">All Stats</a></li>
+                <li><a href="allstats.html">Stats</a></li>
                 <li><a href="rules.html">Rules</a></li>
             </ul>
         </div>
@@ -32,100 +48,106 @@
         
 
         
+
 <div class="page-header">
-    <div class="header-titles">
+    <div>
         <h1>Week 1 Results</h1>
-        <p class="subtitle">2026-01-28 | Torrey South | Par 52 | 13 holes</p>
+        <p class="text-secondary" style="margin: 0; font-size: var(--font-size-sm);">2026-01-28 · Torrey South · Par 52 · 13 holes</p>
     </div>
 </div>
 
 <div class="card">
-    <table class="data-table results-table">
-        <thead>
-            <tr>
-                <th>Rank</th>
-                <th>Player / Team</th>
-                <th>Gross</th>
-                <th>Handicap</th>
-                <th>Net</th>
-                <th>Points</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <tr class="rank-1">
-                <td class="rank-cell">
-                    🥇
-                </td>
-                <td>
-                    <strong>Aaron &amp; Kolby</strong>
+    <div class="table-wrap">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th class="numeric" style="width: 60px;">Rank</th>
+                    <th>Player / Team</th>
+                    <th class="numeric">Gross</th>
+                    <th class="numeric">Hcp</th>
+                    <th class="numeric">Net</th>
+                    <th class="numeric">Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                
                     
-                    <span class="badge badge-secondary" style="font-size: 0.7em; margin-left: 5px;">Team</span>
+                    <tr>
+                        <td class="numeric">
+                            <strong>🥇</strong>
+                        </td>
+                        <td>
+                            <strong>Aaron &amp; Kolby</strong>
+                            
+                            <span class="badge badge-secondary" style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                            
+                        </td>
+                        <td class="numeric">51</td>
+                        <td class="numeric">0.4</td>
+                        <td class="numeric" style="font-weight: var(--font-weight-bold); color: var(--color-primary-600);">50.6</td>
+                        <td class="numeric"><strong>5</strong></td>
+                    </tr>
                     
-                </td>
-                <td>51</td>
-                <td>0.4</td>
-                <td class="net-score">50.6</td>
-                <td class="points-cell"><strong>5</strong></td>
-            </tr>
-            
-            <tr class="rank-2">
-                <td class="rank-cell">
-                    🥈
-                </td>
-                <td>
-                    <strong>Darrell &amp; Eric</strong>
+                    <tr>
+                        <td class="numeric">
+                            <strong>🥈</strong>
+                        </td>
+                        <td>
+                            <strong>Darrell &amp; Eric</strong>
+                            
+                            <span class="badge badge-secondary" style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                            
+                        </td>
+                        <td class="numeric">52</td>
+                        <td class="numeric">—</td>
+                        <td class="numeric" style="font-weight: var(--font-weight-bold); color: var(--color-primary-600);">52.0</td>
+                        <td class="numeric"><strong>4</strong></td>
+                    </tr>
                     
-                    <span class="badge badge-secondary" style="font-size: 0.7em; margin-left: 5px;">Team</span>
+                    <tr>
+                        <td class="numeric">
+                            <strong>🥉</strong>
+                        </td>
+                        <td>
+                            <strong>Beers &amp; Tony</strong>
+                            
+                            <span class="badge badge-secondary" style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                            
+                        </td>
+                        <td class="numeric">54</td>
+                        <td class="numeric">0.7</td>
+                        <td class="numeric" style="font-weight: var(--font-weight-bold); color: var(--color-primary-600);">53.4</td>
+                        <td class="numeric"><strong>3</strong></td>
+                    </tr>
                     
-                </td>
-                <td>52</td>
-                <td>-</td>
-                <td class="net-score">52.0</td>
-                <td class="points-cell"><strong>4</strong></td>
-            </tr>
-            
-            <tr class="rank-3">
-                <td class="rank-cell">
-                    🥉
-                </td>
-                <td>
-                    <strong>Beers &amp; Tony</strong>
+                    <tr>
+                        <td class="numeric">
+                            <strong>4</strong>
+                        </td>
+                        <td>
+                            <strong>Chez &amp; Tory</strong>
+                            
+                            <span class="badge badge-secondary" style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                            
+                        </td>
+                        <td class="numeric">60</td>
+                        <td class="numeric">1.4</td>
+                        <td class="numeric" style="font-weight: var(--font-weight-bold); color: var(--color-primary-600);">58.6</td>
+                        <td class="numeric"><strong>2</strong></td>
+                    </tr>
                     
-                    <span class="badge badge-secondary" style="font-size: 0.7em; margin-left: 5px;">Team</span>
-                    
-                </td>
-                <td>54</td>
-                <td>0.7</td>
-                <td class="net-score">53.4</td>
-                <td class="points-cell"><strong>3</strong></td>
-            </tr>
-            
-            <tr class="rank-4">
-                <td class="rank-cell">
-                    4
-                </td>
-                <td>
-                    <strong>Chez &amp; Tory</strong>
-                    
-                    <span class="badge badge-secondary" style="font-size: 0.7em; margin-left: 5px;">Team</span>
-                    
-                </td>
-                <td>60</td>
-                <td>1.4</td>
-                <td class="net-score">58.6</td>
-                <td class="points-cell"><strong>2</strong></td>
-            </tr>
-            
-        </tbody>
-    </table>
+                
+            </tbody>
+        </table>
+    </div>
 </div>
 
-<div class="form-actions">
-    <a href="#" class="disabled admin-only">📊 Export to Excel (Admin only)</a>
-    <a href="leaderboard.html" class="btn btn-secondary">View Season Leaderboard</a>
-    <a href="weeks.html" class="btn btn-secondary">Back to Weeks</a>
+<div class="btn-group" style="margin-top: var(--space-6);">
+    <a href="#" class="disabled admin-only">Export Results (Admin only)</a>
+    <a href="leaderboard.html" class="btn btn-secondary">Season Leaderboard</a>
+    <a href="weeks.html" class="btn btn-outline">Back to Weeks</a>
 </div>
+
 
     </main>
 

@@ -5,14 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Players - Winter Golf League</title>
+    
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+    
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+    
+    <!-- Page Layout: Navigation, Footer -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+    
+    <!-- Responsive Overrides -->
     <link rel="stylesheet" href="mobile.css">
+
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">⛳ Winter Golf League</h1>
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="players.html">Players</a></li>
@@ -20,7 +36,7 @@
                 <li><a href="leaderboard.html">Leaderboard</a></li>
                 <li><a href="handicaps.html">Handicaps</a></li>
                 <li><a href="coursepars.html">Course Pars</a></li>
-                <li><a href="allstats.html">All Stats</a></li>
+                <li><a href="allstats.html">Stats</a></li>
                 <li><a href="rules.html">Rules</a></li>
             </ul>
         </div>
@@ -32,198 +48,227 @@
         
 
         
-<div class="page-header" style="display: flex; justify-content: space-between; align-items: center;">
-    <h1>Players</h1>
+
+<div class="page-header">
+    <div>
+        <h1>Players</h1>
+    </div>
     <div class="header-actions">
-        <a href="#" class="disabled admin-only">📊 Export to Excel (Admin only)</a>
         <a href="#" class="disabled admin-only">+ Add Player (Admin only)</a>
+        <a href="#" class="disabled admin-only">Export (Admin only)</a>
     </div>
 </div>
 
 <div class="card">
-    <table class="data-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Status</th>
-                <th>Joined</th>
-            </tr>
-        </thead>
-        <tbody>
-            
-            <tr>
-                <td><strong>Aaron</strong></td>
-                <td>
+    <div class="table-wrap">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Joined</th>
+                    <th style="width: 160px; text-align: right;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                
                     
-                    <span class="badge badge-success">Active</span>
+                    <tr>
+                        <td>
+                            <strong>Aaron</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:38:39</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:38:39</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Beers</strong></td>
-                <td>
+                    <tr>
+                        <td>
+                            <strong>Beers</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:39:05</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <span class="badge badge-success">Active</span>
+                    <tr>
+                        <td>
+                            <strong>Chez</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:38:57</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:39:05</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Chez</strong></td>
-                <td>
+                    <tr>
+                        <td>
+                            <strong>Darrell</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:39:29</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <span class="badge badge-success">Active</span>
+                    <tr>
+                        <td>
+                            <strong>Eric</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:38:50</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:38:57</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Darrell</strong></td>
-                <td>
+                    <tr>
+                        <td>
+                            <strong>Kolby</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:39:19</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <span class="badge badge-success">Active</span>
+                    <tr>
+                        <td>
+                            <strong>Smurf</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-secondary">Inactive</span>
+                            
+                        </td>
+                        <td>2026-01-27 22:24:43</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Activate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:39:29</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Eric</strong></td>
-                <td>
+                    <tr>
+                        <td>
+                            <strong>Test Sub</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-secondary">Inactive</span>
+                            
+                        </td>
+                        <td>2026-01-27 22:36:46</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Activate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <span class="badge badge-success">Active</span>
+                    <tr>
+                        <td>
+                            <strong>Tony</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:39:13</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:38:50</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Kolby</strong></td>
-                <td>
+                    <tr>
+                        <td>
+                            <strong>Tory</strong>
+                        </td>
+                        <td>
+                            
+                                <span class="badge badge-success">Active</span>
+                            
+                        </td>
+                        <td>2026-01-27 19:40:01</td>
+                        <td style="text-align: right;">
+                            <form action="#" method="get" style="display:inline;">
+                                <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                    Deactivate
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
                     
-                    <span class="badge badge-success">Active</span>
-                    
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:39:19</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Smurf</strong></td>
-                <td>
-                    
-                    <span class="badge badge-secondary" style="background-color: #6c757d;">Inactive</span>
-                    
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Activate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 22:24:43</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Test Sub</strong></td>
-                <td>
-                    
-                    <span class="badge badge-secondary" style="background-color: #6c757d;">Inactive</span>
-                    
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Activate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 22:36:46</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Tony</strong></td>
-                <td>
-                    
-                    <span class="badge badge-success">Active</span>
-                    
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:39:13</td>
-            </tr>
-            
-            <tr>
-                <td><strong>Tory</strong></td>
-                <td>
-                    
-                    <span class="badge badge-success">Active</span>
-                    
-                    <form action="#" method="get"
-                        style="display:inline; margin-left: 10px;">
-                        <button type="submit" class="btn-sm"
-                            style="cursor: pointer; padding: 2px 8px; border: 1px solid #ddd; background: #f8f9fa; border-radius: 4px;" disabled>
-                            Deactivate
-                        </button>
-                    </form>
-                </td>
-                <td>2026-01-27 19:40:01</td>
-            </tr>
-            
-        </tbody>
-    </table>
+                
+            </tbody>
+        </table>
+    </div>
 </div>
+
 
     </main>
 

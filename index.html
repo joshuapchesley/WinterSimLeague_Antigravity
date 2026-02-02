@@ -5,14 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Winter Golf League</title>
+    
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+    
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+    
+    <!-- Page Layout: Navigation, Footer -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+    <link rel="stylesheet" href="landing.css">
+
+    
+    <!-- Responsive Overrides -->
     <link rel="stylesheet" href="mobile.css">
+
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="container">
-            <h1 class="logo">⛳ Winter Golf League</h1>
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="players.html">Players</a></li>
@@ -20,7 +38,7 @@
                 <li><a href="leaderboard.html">Leaderboard</a></li>
                 <li><a href="handicaps.html">Handicaps</a></li>
                 <li><a href="coursepars.html">Course Pars</a></li>
-                <li><a href="allstats.html">All Stats</a></li>
+                <li><a href="allstats.html">Stats</a></li>
                 <li><a href="rules.html">Rules</a></li>
             </ul>
         </div>
@@ -32,107 +50,208 @@
         
 
         
+
+<!-- HERO SECTION -->
 <div class="hero">
-    <h1>Welcome to Winter Golf League</h1>
-    <p class="subtitle">A rules-driven league management system</p>
+    <h1>Winter Golf League</h1>
+    <p class="subtitle">Professional league management for serious competitors</p>
+    
+    
+    <div class="hero-stats">
+        
+        
+        
+            
+            <div class="stat">
+                <div class="stat-value">4</div>
+                <div class="stat-label">Next Matches</div>
+            </div>
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    
 </div>
 
-<div class="dashboard-grid">
-    <div class="card">
-        <h2>🏌️ Quick Actions</h2>
-        <ul class="action-list">
-            <li><a href="#" class="disabled admin-only">Add New Player (Admin only)</a></li>
-            <li><a href="#" class="disabled admin-only">Set Up New Week (Admin only)</a></li>
-            <li><a href="#" class="disabled admin-only">Add Stroke Play Round (Admin only)</a></li>
-        </ul>
+<!-- FEATURED ACTIONS -->
+<div class="featured-grid" style="margin-bottom: var(--space-12);">
+    <div class="featured-card">
+        <div class="featured-card-header"></div>
+        <div class="featured-card-body">
+            <h3 class="featured-card-title">Setup & Management</h3>
+            <p class="featured-card-description">Manage players, configure weeks, and set course parameters for your league.</p>
+            <div class="featured-card-actions">
+                <a href="#" class="disabled admin-only">Add Player (Admin only)</a>
+                <a href="#" class="disabled admin-only">New Week (Admin only)</a>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-        <h2>📊 View Data</h2>
-        <ul class="action-list">
-            <li><a href="leaderboard.html" class="btn btn-secondary">Season Leaderboard</a></li>
-            <li><a href="weeks.html" class="btn btn-secondary">All Weeks</a></li>
-            <li><a href="handicaps.html" class="btn btn-secondary">Player Handicaps</a></li>
-        </ul>
+    <div class="featured-card">
+        <div class="featured-card-header"></div>
+        <div class="featured-card-body">
+            <h3 class="featured-card-title">Scoring & Results</h3>
+            <p class="featured-card-description">Enter scores, view weekly results, and track season standings with live calculations.</p>
+            <div class="featured-card-actions">
+                <a href="weeks.html" class="btn btn-primary btn-sm">View Weeks</a>
+                <a href="leaderboard.html" class="btn btn-secondary btn-sm">Leaderboard</a>
+            </div>
+        </div>
     </div>
 
-    <div class="card">
-        <h2>ℹ️ System Info</h2>
-        <p><strong>Single Source of Truth:</strong> All results originate from one authoritative data store.</p>
-        <p><strong>Intentional Handicaps:</strong> Suggested handicaps are calculated automatically, but updates are
-            intentional and transparent.</p>
-        <p><strong>Historical Integrity:</strong> Past results are never changed by handicap updates; changes only
-            affect future rounds.</p>
+    <div class="featured-card">
+        <div class="featured-card-header"></div>
+        <div class="featured-card-body">
+            <h3 class="featured-card-title">Handicap System</h3>
+            <p class="featured-card-description">Track handicaps, add stroke play rounds, and manage your players' indices.</p>
+            <div class="featured-card-actions">
+                <a href="handicaps.html" class="btn btn-primary btn-sm">View Handicaps</a>
+                <a href="#" class="disabled admin-only">Add Round (Admin only)</a>
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="card" style="margin-bottom: 2rem;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-        <h2 style="margin-bottom: 0;">🤝 Suggested Next Matchups</h2>
-        <form action="#" method="get" style="display: inline;">
-            <button type="submit" class="btn btn-sm btn-outline-primary" disabled>Shuffle Pairings</button>
+<!-- QUICK ACTIONS SECTION -->
+<div class="action-section">
+    <h2 style="margin-bottom: var(--space-6);">Quick Setup</h2>
+    <div class="action-grid">
+        <div class="action-item">
+            <h4 style="color: var(--color-primary-600); margin-bottom: var(--space-2);">Players</h4>
+            <a href="players.html" class="btn btn-outline">View All</a>
+            <a href="#" class="disabled admin-only">Add New (Admin only)</a>
+        </div>
+        <div class="action-item">
+            <h4 style="color: var(--color-primary-600); margin-bottom: var(--space-2);">Weeks</h4>
+            <a href="weeks.html" class="btn btn-outline">View All</a>
+            <a href="#" class="disabled admin-only">Create Week (Admin only)</a>
+        </div>
+        <div class="action-item">
+            <h4 style="color: var(--color-primary-600); margin-bottom: var(--space-2);">Courses</h4>
+            <a href="coursepars.html" class="btn btn-outline">Manage Pars</a>
+        </div>
+        <div class="action-item">
+            <h4 style="color: var(--color-primary-600); margin-bottom: var(--space-2);">Handicaps</h4>
+            <a href="handicaps.html" class="btn btn-outline">View All</a>
+            <a href="#" class="disabled admin-only">Add Round (Admin only)</a>
+        </div>
+    </div>
+</div>
+
+<!-- SUGGESTED MATCHUPS -->
+<div class="matchups-section">
+    <div class="matchups-header">
+        <h2>Suggested Pairings</h2>
+        <form action="#" method="get">
+            <button type="submit" class="btn btn-outline" disabled>Regenerate</button>
         </form>
     </div>
 
     
-    <div class="dashboard-grid" style="grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));">
+    <div class="matchup-grid">
         
-        <div class="step" style="padding: 1rem; text-align: left;">
-            <h4 style="color: var(--primary-color);">Match 1</h4>
-            <p><strong>Tony</strong> & <strong>Kolby</strong></p>
-            <p><small>Combined Hcp: 14.1</small></p>
+        <div class="matchup-card">
+            <div class="matchup-number">Match 1</div>
+            <div class="matchup-players">
+                <strong>Tony</strong> & <strong>Kolby</strong>
+            </div>
+            <div class="matchup-handicap">
+                Combined: 14.1
+            </div>
         </div>
         
-        <div class="step" style="padding: 1rem; text-align: left;">
-            <h4 style="color: var(--primary-color);">Match 2</h4>
-            <p><strong>Aaron</strong> & <strong>Darrell</strong></p>
-            <p><small>Combined Hcp: 26.4</small></p>
+        <div class="matchup-card">
+            <div class="matchup-number">Match 2</div>
+            <div class="matchup-players">
+                <strong>Aaron</strong> & <strong>Darrell</strong>
+            </div>
+            <div class="matchup-handicap">
+                Combined: 26.4
+            </div>
         </div>
         
-        <div class="step" style="padding: 1rem; text-align: left;">
-            <h4 style="color: var(--primary-color);">Match 3</h4>
-            <p><strong>Beers</strong> & <strong>Tory</strong></p>
-            <p><small>Combined Hcp: 28.5</small></p>
+        <div class="matchup-card">
+            <div class="matchup-number">Match 3</div>
+            <div class="matchup-players">
+                <strong>Beers</strong> & <strong>Tory</strong>
+            </div>
+            <div class="matchup-handicap">
+                Combined: 28.5
+            </div>
         </div>
         
-        <div class="step" style="padding: 1rem; text-align: left;">
-            <h4 style="color: var(--primary-color);">Match 4</h4>
-            <p><strong>Eric</strong> & <strong>Chez</strong></p>
-            <p><small>Combined Hcp: 19.9</small></p>
+        <div class="matchup-card">
+            <div class="matchup-number">Match 4</div>
+            <div class="matchup-players">
+                <strong>Eric</strong> & <strong>Chez</strong>
+            </div>
+            <div class="matchup-handicap">
+                Combined: 19.9
+            </div>
         </div>
         
     </div>
-    <p style="margin-top: 1rem; font-style: italic; color: var(--text-light);">
-        * Based on latest handicaps. Pairings follow an A-B (High-Low) balancing algorithm.
+    <p style="margin-top: var(--space-4); font-style: italic; color: var(--color-text-tertiary); text-align: center; font-size: var(--font-size-sm);">
+        Based on current handicaps using A-B (High-Low) balancing algorithm
     </p>
     
 </div>
 
-<div class="workflow-section">
-    <h2>📋 Workflow</h2>
-    <div class="workflow-steps">
-        <div class="step">
-            <div class="step-number">1</div>
-            <h3>Setup</h3>
-            <p>Define week structure: date, course, format, participants</p>
-        </div>
-        <div class="step">
-            <div class="step-number">2</div>
-            <h3>Scoring</h3>
-            <p>Enter gross scores (one time only)</p>
-        </div>
-        <div class="step">
-            <div class="step-number">3</div>
-            <h3>Calculation</h3>
-            <p>System applies handicaps, calculates net scores, ranks, and points</p>
-        </div>
-        <div class="step">
-            <div class="step-number">4</div>
-            <h3>Results</h3>
-            <p>View weekly results and updated season standings</p>
+<!-- SYSTEM PRINCIPLES -->
+<div class="card" style="margin-bottom: var(--space-12);">
+    <div class="card-header">
+        <h3>System Principles</h3>
+    </div>
+    <div class="card-body">
+        <div class="grid grid-auto">
+            <div class="info-section">
+                <h4>Single Source of Truth</h4>
+                <p>All results originate from one authoritative data store, ensuring consistency across the entire system.</p>
+            </div>
+            <div class="info-section">
+                <h4>Intentional Handicaps</h4>
+                <p>Suggested handicaps are calculated automatically, but updates are deliberate and transparent to everyone.</p>
+            </div>
+            <div class="info-section">
+                <h4>Historical Integrity</h4>
+                <p>Past results are never retroactively altered. Handicap changes only affect future rounds and standings.</p>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- WORKFLOW SECTION -->
+<div class="workflow-section">
+    <h2>League Workflow</h2>
+    <div class="workflow-steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Setup Week</h3>
+            <p>Define the week structure: date, course, format, and participants</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Enter Scores</h3>
+            <p>Record gross scores for each entry (one-time data entry)</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Auto-Calculate</h3>
+            <p>System applies handicaps, calculates net scores, ranks, and awards points</p>
+        </div>
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Review Results</h3>
+            <p>View weekly leaderboards and updated season standings</p>
+        </div>
+    </div>
+</div>
+
 
     </main>
 
