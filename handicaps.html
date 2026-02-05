@@ -65,17 +65,14 @@
         <table class="data-table handicap-table">
             <thead>
                 <tr>
-                    <th class="text-left" style="width: 20%;">Player</th>
-                    <th class="numeric" style="width: 15%;"
+                    <th class="text-left" style="width: 22%;">Player</th>
+                    <th class="numeric" style="width: 18%;"
                         title="The current official index used for scoring. Updates only when the commissioner clicks Update.">
                         Current</th>
-                    <th class="numeric" style="width: 22%;"
+                    <th class="numeric" style="width: 38%;"
                         title="Calculated from BEST differentials in most recent pool. Follows USGA-style calculation (x0.96).">
                         Suggested (USGA)</th>
-                    <th class="numeric" style="width: 25%;"
-                        title="Calculated from ALL eligible individual rounds (no selection logic, no x0.96 multiplier).">
-                        Suggested (All Rounds)</th>
-                    <th class="numeric" style="width: 10%;">Effective Date</th>
+                    <th class="numeric" style="width: 12%;">Effective Date</th>
                     <th class="text-center" style="width: 140px;">Action</th>
                 </tr>
             </thead>
@@ -113,44 +110,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">12.1</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 2×18
-                             + 1×9 (pending 1)
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            18.2 (2026-01-23, paired 9s),
-                            
-                            
-                            
-                            6.0 (2026-02-04)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-01-23</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (5.8)
-                                </option>
-                                <option value="all" >All
-                                    (12.1)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -186,52 +151,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">5.7</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 4×18
-                             + 1×9 (pending 1)
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            13.7 (2026-01-28, paired 9s),
-                            
-                            
-                            
-                            7.3 (2026-02-01, paired 9s),
-                            
-                            
-                            
-                            -3.1 (2026-02-04),
-                            
-                            
-                            
-                            5.0 (2026-02-04)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (-3.0)
-                                </option>
-                                <option value="all" >All
-                                    (5.7)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -267,48 +192,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">19.8</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 3×18
-                             + 1×9 (pending 1)
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            38.3 (2026-01-23, paired 9s),
-                            
-                            
-                            
-                            9.2 (2026-01-30),
-                            
-                            
-                            
-                            12.0 (2026-02-04)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (8.8)
-                                </option>
-                                <option value="all" >All
-                                    (19.8)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -344,48 +233,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">19.4</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 3×18
-                            
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            32.3 (2026-01-23, paired 9s),
-                            
-                            
-                            
-                            2.9 (2026-02-01),
-                            
-                            
-                            
-                            23.0 (2026-02-04)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (2.8)
-                                </option>
-                                <option value="all" >All
-                                    (19.4)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -421,40 +274,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">16.1</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 1×18
-                             + 1×9 (pending 1)
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            16.1 (2026-01-23, paired 9s)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-01-23</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (15.5)
-                                </option>
-                                <option value="all" >All
-                                    (16.1)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -490,48 +315,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">4.3</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 3×18
-                             + 1×9 (pending 1)
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            18.2 (2026-01-23, paired 9s),
-                            
-                            
-                            
-                            -6.3 (2026-02-01),
-                            
-                            
-                            
-                            1.0 (2026-02-04)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (-6.0)
-                                </option>
-                                <option value="all" >All
-                                    (4.3)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -567,48 +356,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">13.6</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 3×18
-                             + 1×9 (pending 1)
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            20.2 (2026-01-23, paired 9s),
-                            
-                            
-                            
-                            6.6 (2026-01-30),
-                            
-                            
-                            
-                            14.0 (2026-02-04)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-01-23</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (6.3)
-                                </option>
-                                <option value="all" >All
-                                    (13.6)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -644,44 +397,12 @@
                         </div>
                         
                     </td>
-                    <td class="numeric" style="vertical-align: top;">
-                        
-                        <div style="font-weight: 600;">25.9</div>
-                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
-                            Average of all rounds<br>
-                            Pool: 2×18
-                             + 1×9 (pending 1)
-                            <br>
-                            Avg of:
-                            
-                            
-                            
-                            
-                            33.9 (2026-02-01, paired 9s),
-                            
-                            
-                            
-                            18.0 (2026-02-04)
-                            
-                            
-                            
-                        </div>
-                        
-                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
                             method="get">
-                            <select name="source" class="form-control form-control-sm"
-                                style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
-                                <option value="usga" >USGA
-                                    (17.3)
-                                </option>
-                                <option value="all" >All
-                                    (25.9)
-                                </option>
-                            </select>
-                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                            <input type="hidden" name="source" value="usga">
+                            <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
                 </tr>
@@ -749,10 +470,7 @@
                         used for scoring weeks.</li>
                     <li><strong>Suggested (USGA):</strong> Calculated using the official USGA/GHIN method. Uses the BEST
                         differentials from the most recent 20 rounds, applies the 0.96 multiplier, and follows GHIN
-                        9-hole
-                        pairing rules.</li>
-                    <li><strong>Suggested (All Rounds):</strong> Calculated using ALL eligible individual rounds (Manual
-                        + Regular Weekly). Reflects overall scoring performance and updates with every round.</li>
+                        9-hole pairing rules.</li>
                     <li style="margin-top: 4px;"><strong>Pool:</strong> The total number of effective 18-hole rounds
                         available after pairing 9-hole scores. Any single unpaired score is marked as "pending."</li>
                     <li><strong>Transparency:</strong> Below each suggestion, the specific differentials, dates, and
