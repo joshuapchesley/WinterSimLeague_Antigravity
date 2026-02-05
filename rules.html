@@ -153,8 +153,13 @@
             </li>
             <li
                 style="padding: var(--space-3) 0; padding-left: var(--space-6); border-left: 2px solid var(--color-primary-300);">
-                <strong>Formula:</strong> We calculate a differential for each round, average your best scores, and
-                apply the USGA 0.96 factor.
+                <strong>Formula:</strong> We calculate two suggestions (USGA Method and All Rounds Average). The USGA
+                method uses the best differentials from your recent history and applies the 0.96 factor.
+            </li>
+            <li
+                style="padding: var(--space-3) 0; padding-left: var(--space-6); border-left: 2px solid var(--color-primary-300);">
+                <strong>Transparency:</strong> The Handicaps page shows the exact "Pool" of scores, the dates, and
+                identifies which rounds were paired vs 18-hole.
             </li>
         </ul>
 
@@ -214,8 +219,12 @@
         </div>
 
         <div class="alert alert-warning" style="margin-top: var(--space-4);">
-            <strong>9-Hole Play:</strong> Differentials are calculated and doubled to normalize to an 18-hole
+            <strong>9-Hole Play (GHIN Style):</strong> 9-hole rounds are no longer "doubled." Instead, we use GHIN-style
+            pairing.
+            The system takes your 9-hole rounds (oldest first) and pairs them together to form a synthetic 18-hole
             equivalent.
+            Only completed 18-hole equivalents are used in the differential pool for calculations. Any unpaired 9-hole
+            round sits as "pending" until your next 9.
         </div>
 
         <h4 style="margin-top: var(--space-6);">Substitute Policy</h4>

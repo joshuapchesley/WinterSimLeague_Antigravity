@@ -807,3 +807,13 @@ table th.numeric {
   margin-top: var(--space-2);
   animation: slideDown 0.2s ease-out;
 }
+
+/* Hole Score Input Specifics */
+.hole-score-input {
+  min-width: 60px;
+  /* Ensure enough width for number + spinner */
+  padding: 4px 0 !important;
+  /* Maximizing internal space */
+  text-align: center;
+  font-weight: 600;
+}

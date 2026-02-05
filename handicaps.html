@@ -64,210 +64,603 @@
     <table class="data-table">
         <thead>
             <tr>
-                <th class="text-left">Player</th>
-                <th class="numeric">Current</th>
-                <th class="numeric">Suggested</th>
-                <th class="numeric">Effective Date</th>
-                <th class="numeric">Rounds</th>
-                <th class="text-center" style="width: 100px;">Action</th>
+                <th class="text-left" style="width: 20%;">Player</th>
+                <th class="numeric" style="width: 15%;"
+                    title="The current official index used for scoring. Updates only when the commissioner clicks Update.">
+                    Current</th>
+                <th class="numeric" style="width: 22%;"
+                    title="Calculated from BEST differentials in most recent pool. Follows USGA-style calculation (x0.96).">
+                    Suggested (USGA)</th>
+                <th class="numeric" style="width: 25%;"
+                    title="Calculated from ALL eligible individual rounds (no selection logic, no x0.96 multiplier).">
+                    Suggested (All Rounds)</th>
+                <th class="numeric" style="width: 10%;">Effective Date</th>
+                <th class="text-center" style="width: 140px;">Action</th>
             </tr>
         </thead>
         <tbody>
             
             
             <tr>
-                <td class="text-left"><strong>Aaron</strong></td>
-                <td class="numeric">
+                <td class="text-left" style="vertical-align: top;"><strong>Aaron</strong></td>
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">9.7</span>
-                    
-                </td>
-                <td class="numeric">
-                    
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">9.7</span>
-                    
-                </td>
-                <td class="numeric">2026-01-23</td>
-                <td class="numeric">3</td>
-                <td class="text-center">
-                    
-                    <span class="text-muted-sm">Current</span>
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        9.7
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
                     
                 </td>
-            </tr>
-            
-            <tr>
-                <td class="text-left"><strong>Beers</strong></td>
-                <td class="numeric">
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">4.9</span>
-                    
-                </td>
-                <td class="numeric">
-                    
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">4.9</span>
-                    
-                </td>
-                <td class="numeric">2026-02-01</td>
-                <td class="numeric">3</td>
-                <td class="text-center">
-                    
-                    <span class="text-muted-sm">Current</span>
+                    <div style="font-weight: 600;">5.8</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 2×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Used:
+                        
+                        
+                        6.0 (2026-02-04)
+                        
+                        
+                    </div>
                     
                 </td>
-            </tr>
-            
-            <tr>
-                <td class="text-left"><strong>Chez</strong></td>
-                <td class="numeric">
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">18.0</span>
-                    
-                </td>
-                <td class="numeric">
-                    
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">18.0</span>
-                    
-                </td>
-                <td class="numeric">2026-02-01</td>
-                <td class="numeric">4</td>
-                <td class="text-center">
-                    
-                    <span class="text-muted-sm">Current</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="text-left"><strong>Darrell</strong></td>
-                <td class="numeric">
-                    
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">16.7</span>
+                    <div style="font-weight: 600;">12.1</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 2×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        18.2 (2026-01-23, paired 9s), 
+                        
+                        
+                        6.0 (2026-02-04)
+                        
+                        
+                        
+                    </div>
                     
                 </td>
-                <td class="numeric">
-                    
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">16.7</span>
-                    
-                </td>
-                <td class="numeric">2026-02-01</td>
-                <td class="numeric">3</td>
-                <td class="text-center">
-                    
-                    <span class="text-muted-sm">Current</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="text-left"><strong>Eric</strong></td>
-                <td class="numeric">
-                    
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">1.9</span>
-                    
-                </td>
-                <td class="numeric">
-                    
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">1.9</span>
-                    
-                </td>
-                <td class="numeric">2026-01-23</td>
-                <td class="numeric">3</td>
-                <td class="text-center">
-                    
-                    <span class="text-muted-sm">Current</span>
-                    
-                </td>
-            </tr>
-            
-            <tr>
-                <td class="text-left"><strong>Kolby</strong></td>
-                <td class="numeric">
-                    
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">5.1</span>
-                    
-                </td>
-                <td class="numeric">
-                    
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">-1.1</span>
-                    
-                </td>
-                <td class="numeric">2026-02-01</td>
-                <td class="numeric">3</td>
-                <td class="text-center">
-                    
+                <td class="numeric" style="vertical-align: top;">2026-01-23</td>
+                <td class="text-center" style="vertical-align: top;">
                     <form action="#"
-                        method="get" style="display:inline;">
-                        <button type="submit" class="btn btn-sm btn-primary"
-                            title="Update to suggested handicap" disabled disabled>(Admin only) Update</button>
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (5.8)
+                            </option>
+                            <option value="all" >All
+                                (12.1)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
                     </form>
-                    
                 </td>
             </tr>
             
             <tr>
-                <td class="text-left"><strong>Tony</strong></td>
-                <td class="numeric">
+                <td class="text-left" style="vertical-align: top;"><strong>Beers</strong></td>
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">9.0</span>
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        4.9
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
                     
                 </td>
-                <td class="numeric">
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">9.0</span>
+                    <div style="font-weight: 600;">-3.0</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 4×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Used:
+                        
+                        
+                        -3.1 (2026-02-04)
+                        
+                        
+                    </div>
                     
                 </td>
-                <td class="numeric">2026-01-23</td>
-                <td class="numeric">3</td>
-                <td class="text-center">
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span class="text-muted-sm">Current</span>
+                    <div style="font-weight: 600;">5.7</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 4×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        13.7 (2026-01-28, paired 9s), 
+                        
+                        
+                        7.3 (2026-02-01, paired 9s), 
+                        
+                        
+                        -3.1 (2026-02-04), 
+                        
+                        
+                        5.0 (2026-02-04)
+                        
+                        
+                        
+                    </div>
                     
+                </td>
+                <td class="numeric" style="vertical-align: top;">2026-02-01</td>
+                <td class="text-center" style="vertical-align: top;">
+                    <form action="#"
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (-3.0)
+                            </option>
+                            <option value="all" >All
+                                (5.7)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                    </form>
                 </td>
             </tr>
             
             <tr>
-                <td class="text-left"><strong>Tory</strong></td>
-                <td class="numeric">
+                <td class="text-left" style="vertical-align: top;"><strong>Chez</strong></td>
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span
-                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">23.6</span>
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        18.0
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
                     
                 </td>
-                <td class="numeric">
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span class="text-muted" style="margin-right: 4px;">Est:</span>
-                    <span
-                        style="background: var(--color-neutral-200); color: var(--color-text-primary); padding: var(--space-1) var(--space-2); border-radius: var(--radius-base); font-weight: var(--font-weight-medium);">23.6</span>
+                    <div style="font-weight: 600;">8.8</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 3×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Used:
+                        
+                        
+                        9.2 (2026-01-30)
+                        
+                        
+                    </div>
                     
                 </td>
-                <td class="numeric">2026-02-01</td>
-                <td class="numeric">3</td>
-                <td class="text-center">
+                <td class="numeric" style="vertical-align: top;">
                     
-                    <span class="text-muted-sm">Current</span>
+                    <div style="font-weight: 600;">19.8</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 3×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        38.3 (2026-01-23, paired 9s), 
+                        
+                        
+                        9.2 (2026-01-30), 
+                        
+                        
+                        12.0 (2026-02-04)
+                        
+                        
+                        
+                    </div>
                     
+                </td>
+                <td class="numeric" style="vertical-align: top;">2026-02-01</td>
+                <td class="text-center" style="vertical-align: top;">
+                    <form action="#"
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (8.8)
+                            </option>
+                            <option value="all" >All
+                                (19.8)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="text-left" style="vertical-align: top;"><strong>Darrell</strong></td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        16.7
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">2.8</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 3×18
+                        
+                        <br>
+                        Used:
+                        
+                        
+                        2.9 (2026-02-01)
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">19.4</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 3×18
+                        
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        32.3 (2026-01-23, paired 9s), 
+                        
+                        
+                        2.9 (2026-02-01), 
+                        
+                        
+                        23.0 (2026-02-04)
+                        
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">2026-02-01</td>
+                <td class="text-center" style="vertical-align: top;">
+                    <form action="#"
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (2.8)
+                            </option>
+                            <option value="all" >All
+                                (19.4)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="text-left" style="vertical-align: top;"><strong>Eric</strong></td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        1.9
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">15.5</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 1×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Used:
+                        
+                        
+                        16.1 (2026-01-23, paired 9s)
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">16.1</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 1×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        16.1 (2026-01-23, paired 9s)
+                        
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">2026-01-23</td>
+                <td class="text-center" style="vertical-align: top;">
+                    <form action="#"
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (15.5)
+                            </option>
+                            <option value="all" >All
+                                (16.1)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="text-left" style="vertical-align: top;"><strong>Kolby</strong></td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        5.1
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">-6.0</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 3×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Used:
+                        
+                        
+                        -6.3 (2026-02-01)
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">4.3</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 3×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        18.2 (2026-01-23, paired 9s), 
+                        
+                        
+                        -6.3 (2026-02-01), 
+                        
+                        
+                        1.0 (2026-02-04)
+                        
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">2026-02-01</td>
+                <td class="text-center" style="vertical-align: top;">
+                    <form action="#"
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (-6.0)
+                            </option>
+                            <option value="all" >All
+                                (4.3)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="text-left" style="vertical-align: top;"><strong>Tony</strong></td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        9.0
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">6.3</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 3×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Used:
+                        
+                        
+                        6.6 (2026-01-30)
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">13.6</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 3×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        20.2 (2026-01-23, paired 9s), 
+                        
+                        
+                        6.6 (2026-01-30), 
+                        
+                        
+                        14.0 (2026-02-04)
+                        
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">2026-01-23</td>
+                <td class="text-center" style="vertical-align: top;">
+                    <form action="#"
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (6.3)
+                            </option>
+                            <option value="all" >All
+                                (13.6)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                    </form>
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="text-left" style="vertical-align: top;"><strong>Tory</strong></td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div
+                        style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); color: var(--color-primary-600);">
+                        23.6
+                    </div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Official league handicap<br>
+                        Used for scoring
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">17.3</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Best rounds (USGA method)<br>
+                        Pool: 2×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Used:
+                        
+                        
+                        18.0 (2026-02-04)
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">
+                    
+                    <div style="font-weight: 600;">25.9</div>
+                    <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                        Average of all rounds<br>
+                        Pool: 2×18
+                         + 1×9 (pending 1)
+                        <br>
+                        Avg of:
+                        
+                        
+                        
+                        
+                        33.9 (2026-02-01, paired 9s), 
+                        
+                        
+                        18.0 (2026-02-04)
+                        
+                        
+                        
+                    </div>
+                    
+                </td>
+                <td class="numeric" style="vertical-align: top;">2026-02-01</td>
+                <td class="text-center" style="vertical-align: top;">
+                    <form action="#"
+                        method="get">
+                        <select name="source" class="form-control form-control-sm"
+                            style="margin-bottom: 4px; font-size: 11px; padding: 2px;">
+                            <option value="usga" >USGA (17.3)
+                            </option>
+                            <option value="all" >All
+                                (25.9)
+                            </option>
+                        </select>
+                        <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;" disabled disabled>(Admin only) Update</button>
+                    </form>
                 </td>
             </tr>
             
@@ -302,7 +695,7 @@
                         <form action="#" method="get"
                             id="sub_hcp_form_9" style="display: flex; justify-content: center;">
                             <input type="number" step="0.1" name="sub_handicap"
-                                value="10.0"
+                                value="11.0"
                                 class="form-control form-control-sm" style="width: 80px; text-align: center;"
                                 placeholder="—">
                         </form>
@@ -322,12 +715,47 @@
 
 
 <div class="alert alert-info" style="margin-top: var(--space-6);">
-    <div>
-        <strong>Understanding Handicaps</strong>
-        <p style="margin: var(--space-2) 0;"><strong>Current Handicap:</strong> The official index used for league
-            scoring. Only updates when you click the "Update" button.</p>
-        <p style="margin: 0;"><strong>Suggested Handicap:</strong> Real-time calculation based on recent rounds. Use as
-            guidance for when to officially update.</p>
+    <div style="width: 100%;">
+        <h4 style="margin-top: 0; margin-bottom: var(--space-2);">Understanding the Handicap System</h4>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-6);">
+            <div>
+                <p><strong>Column Definitions:</strong></p>
+                <ul style="margin: 0; padding-left: var(--space-4); font-size: 13px;">
+                    <li><strong>Current:</strong> The active index stored in the player profile. This is the ONLY number
+                        used for scoring weeks.</li>
+                    <li><strong>Suggested (USGA):</strong> Calculated using the official USGA/GHIN method. Uses the BEST
+                        differentials from the most recent 20 rounds, applies the 0.96 multiplier, and follows GHIN
+                        9-hole
+                        pairing rules.</li>
+                    <li><strong>Suggested (All Rounds):</strong> Calculated using ALL eligible individual rounds (Manual
+                        + Regular Weekly). Reflects overall scoring performance and updates with every round.</li>
+                    <li style="margin-top: 4px;"><strong>Pool:</strong> The total number of effective 18-hole rounds
+                        available after pairing 9-hole scores. Any single unpaired score is marked as "pending."</li>
+                    <li><strong>Transparency:</strong> Below each suggestion, the specific differentials, dates, and
+                        "paired" tags are shown for full verification.</li>
+                </ul>
+            </div>
+            <div>
+                <p><strong>Calculation Rules (GHIN-Style):</strong></p>
+                <ul style="margin: 0; padding-left: var(--space-4); font-size: 13px;">
+                    <li><strong>9-Hole Pairing:</strong> Two 9-hole rounds are combined into one 18-hole equivalent
+                        based on date (oldest first).
+                        The date of the 18-hole equivalent is the date of the second (most recent) 9-hole round in the
+                        pair.</li>
+                    <li><strong>Differentials:</strong> Calculated as <code>(Score - Rating) × 113 ÷ Slope</code>.</li>
+                    <li><strong>Best Rounds (USGA Only):</strong> Only the lowest differentials from the most recent 20
+                        are used, per the USGA
+                        index table.</li>
+                </ul>
+            </div>
+        </div>
+
+        <p
+            style="margin-top: var(--space-4); font-size: 12px; color: var(--color-text-tertiary); border-top: 1px solid rgba(0,0,0,0.1); padding-top: var(--space-2);">
+            <em>Note: The Current index is never auto-updated. The commissioner must manually review suggestions and
+                click "Update" to apply them.</em>
+        </p>
     </div>
 </div>
 
