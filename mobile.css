@@ -7,9 +7,11 @@
    MOBILE BASE
    ============================================================================ */
 
-html, body {
+html,
+body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: inherit;
+  /* Allow overflow for scrollable containers */
 }
 
 img {
@@ -47,16 +49,20 @@ img {
 
 @media (max-width: 768px) {
   .table-wrap {
-    width: 100%;
-    overflow-x: auto;
+    width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    display: block;
     border-radius: var(--radius-lg);
   }
 
-  table {
+  /* Specific override for handicaps table to ensure it doesn't collapse */
+  .handicap-table {
+    min-width: 900px !important;
     width: 100%;
     border-collapse: collapse;
-    min-width: 720px;
   }
 
   table th {
@@ -79,6 +85,7 @@ img {
    ============================================================================ */
 
 @media (max-width: 768px) {
+
   .btn,
   button,
   input[type="submit"],
@@ -267,6 +274,7 @@ img {
    ============================================================================ */
 
 @media (hover: none) and (pointer: coarse) {
+
   .btn,
   button,
   a.btn,
@@ -307,6 +315,7 @@ img {
    ============================================================================ */
 
 @media (min-width: 769px) and (max-width: 1024px) {
+
   .grid-cols-3,
   .grid-cols-4,
   .grid-auto-lg {
