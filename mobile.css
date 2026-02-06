@@ -62,11 +62,10 @@ img {
   .table-wrap {
     width: 100% !important;
     overflow-x: auto !important;
-    overflow-y: hidden;
+    /* overflow-y removed - allows vertical page scroll when touching table */
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x pan-y pinch-zoom;
-    /* Allow horizontal scroll, vertical scroll, and pinch zoom */
-    overscroll-behavior: contain;
+    touch-action: auto;
+    /* Allow all gestures: horizontal scroll, vertical scroll, pinch zoom */
     display: block;
     border-radius: var(--radius-lg);
   }
