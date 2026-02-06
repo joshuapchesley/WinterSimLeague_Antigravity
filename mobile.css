@@ -10,8 +10,8 @@
 html,
 body {
   max-width: 100%;
-  overflow-x: inherit;
-  /* Allow overflow for scrollable containers */
+  overflow-x: hidden;
+  /* Prevent horizontal page scroll */
 }
 
 img {
@@ -53,7 +53,9 @@ img {
     overflow-x: auto !important;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
+    touch-action: auto;
+    /* Allow both horizontal and vertical scrolling */
+    overscroll-behavior: contain;
     display: block;
     border-radius: var(--radius-lg);
   }
@@ -63,6 +65,12 @@ img {
     min-width: 900px !important;
     width: 100%;
     border-collapse: collapse;
+  }
+
+  /* Prevent table cells from wrapping into vertical spaghetti */
+  table th,
+  table td {
+    white-space: nowrap;
   }
 
   table th {
@@ -185,6 +193,54 @@ img {
   }
 
   .header-actions .btn {
+    width: 100%;
+  }
+}
+
+/* ============================================================================
+   HAMBURGER NAV TOGGLE (Mobile)
+   ============================================================================ */
+
+/* Hide hamburger on desktop */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  padding: var(--space-2);
+  line-height: 1;
+}
+
+/* Show hamburger on mobile, hide nav by default */
+@media (max-width: 640px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-bg-primary);
+    border-top: 1px solid var(--color-border);
+    margin-top: var(--space-2);
+  }
+
+  /* Show nav when toggled open */
+  .navbar.nav-open .nav-links {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar .nav-links a {
+    display: block;
+    padding: var(--space-3);
     width: 100%;
   }
 }

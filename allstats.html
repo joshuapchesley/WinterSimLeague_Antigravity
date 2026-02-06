@@ -29,6 +29,7 @@
             <div class="navbar-brand">
                 <a href="index.html" class="logo">Winter Golf League</a>
             </div>
+            <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="players.html">Players</a></li>
@@ -1079,6 +1080,20 @@
       if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
     }
   }, true);
+})();
+</script>
+
+<script>
+(function(){
+  const nav = document.querySelector('nav.navbar');
+  const toggle = document.querySelector('.nav-toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+      const isOpen = nav.classList.contains('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 })();
 </script>
 </body>
