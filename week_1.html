@@ -5,19 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
     <title>Week 1 Results - Winter Golf League</title>
-    
+
     <!-- Design System: Tokens, Typography, Colors -->
     <link rel="stylesheet" href="theme.css">
-    
+
     <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
     <link rel="stylesheet" href="components.css">
-    
+
     <!-- Page Layout: Navigation, Footer -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Landing Page Specific Styles (only on index.html) -->
     
-    
+
     <!-- Responsive Overrides -->
     <link rel="stylesheet" href="mobile.css">
 
@@ -37,6 +37,7 @@
                 <li><a href="leaderboard.html">Leaderboard</a></li>
                 <li><a href="handicaps.html">Handicaps</a></li>
                 <li><a href="coursepars.html">Course Pars</a></li>
+                <li><a href="#" class="disabled admin-only">Import (Admin only)</a></li>
                 <li><a href="allstats.html">Stats</a></li>
                 <li><a href="rules.html">Rules</a></li>
             </ul>
@@ -83,6 +84,11 @@
                         
                         <span class="badge badge-secondary"
                             style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                        <div class="text-muted-sm"
+                            style="margin-top: 4px; font-size: 0.7rem; color: #666; line-height: 1.3;">
+                            <em>Gross 51 = best ball each hole · HCP 0.4 = total
+                                handicap strokes (applied hole-by-hole based on course handicap & stroke index) · Net 50.6 = 51 - 0.4</em>
+                        </div>
                         
 
                         
@@ -103,6 +109,11 @@
                         
                         <span class="badge badge-secondary"
                             style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                        <div class="text-muted-sm"
+                            style="margin-top: 4px; font-size: 0.7rem; color: #666; line-height: 1.3;">
+                            <em>Gross 52 = best ball each hole · HCP 0.0 = total
+                                handicap strokes (applied hole-by-hole based on course handicap & stroke index) · Net 52.0 = 52 - 0.0</em>
+                        </div>
                         
 
                         
@@ -123,6 +134,11 @@
                         
                         <span class="badge badge-secondary"
                             style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                        <div class="text-muted-sm"
+                            style="margin-top: 4px; font-size: 0.7rem; color: #666; line-height: 1.3;">
+                            <em>Gross 54 = best ball each hole · HCP 0.7 = total
+                                handicap strokes (applied hole-by-hole based on course handicap & stroke index) · Net 53.4 = 54 - 0.7</em>
+                        </div>
                         
 
                         
@@ -143,6 +159,11 @@
                         
                         <span class="badge badge-secondary"
                             style="margin-left: var(--space-2); font-size: var(--font-size-xs);">Team</span>
+                        <div class="text-muted-sm"
+                            style="margin-top: 4px; font-size: 0.7rem; color: #666; line-height: 1.3;">
+                            <em>Gross 60 = best ball each hole · HCP 1.4 = total
+                                handicap strokes (applied hole-by-hole based on course handicap & stroke index) · Net 58.6 = 60 - 1.4</em>
+                        </div>
                         
 
                         
@@ -159,6 +180,1540 @@
         </table>
     </div>
 </div>
+
+
+<div class="card" style="margin-top: var(--space-6);">
+    <div class="table-wrap">
+        <h3>Game Analysis (Scramble (Gross))</h3>
+        <p class="text-secondary" style="font-size: var(--font-size-sm); margin-bottom: var(--space-4);">
+            Comparison of hole-by-hole Net Scores.
+            <br>
+            <span
+                style="display:inline-block; width: 12px; height: 12px; background: #d4edda; margin-right: 4px; border-radius: 2px;"></span>
+            Winner (Lowest Unique Net Score)
+        </p>
+
+        <table class="data-table" style="font-size: 0.85rem;">
+            <thead>
+                <tr>
+                    <th class="text-left" style="min-width: 120px;">Team / Player</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">1</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">2</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">3</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">4</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">5</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">6</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">7</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">8</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">9</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">10</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">11</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">12</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">13</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">14</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">15</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">16</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">17</th>
+                    
+                    <th class="numeric" style="width: 35px; padding: 4px;">18</th>
+                    
+                    <th class="numeric" style="width: 45px;">Total</th>
+                    <th class="numeric" style="width: 60px;">Won</th>
+                </tr>
+                <!-- Course Info Rows -->
+                <tr style="background-color: #f1f3f5; font-size: 0.75rem; color: #666;">
+                    <td class="text-left"><strong>Par</strong></td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    <td class="numeric" style="padding: 2px;">0</td>
+                    <td></td>
+                </tr>
+                <tr style="background-color: #f1f3f5; font-size: 0.75rem; color: #666; border-bottom: 2px solid #ddd;">
+                    <td class="text-left"><strong>Index</strong></td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    
+                    <td class="numeric" style="padding: 2px;">-</td>
+                    
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <!-- Individual Player Rows (Gross) -->
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Beers <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Tony <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+
+                <!-- Team Net Summary Row -->
+                <tr style="background-color: #f8f9fa; border-top: 2px solid #ddd; border-bottom: 2px solid #888;">
+                    <td class="text-left"><strong>Beers &amp; Tony <span
+                                style="color: var(--color-primary-600); font-size: 0.75rem;">(Team Net)</span></strong>
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="font-weight: bold;">-</td>
+                    <td class="numeric"><strong>0</strong></td>
+                </tr>
+                
+                <!-- Individual Player Rows (Gross) -->
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Chez <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Tory <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+
+                <!-- Team Net Summary Row -->
+                <tr style="background-color: #f8f9fa; border-top: 2px solid #ddd; border-bottom: 2px solid #888;">
+                    <td class="text-left"><strong>Chez &amp; Tory <span
+                                style="color: var(--color-primary-600); font-size: 0.75rem;">(Team Net)</span></strong>
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="font-weight: bold;">-</td>
+                    <td class="numeric"><strong>0</strong></td>
+                </tr>
+                
+                <!-- Individual Player Rows (Gross) -->
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Darrell <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Eric <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+
+                <!-- Team Net Summary Row -->
+                <tr style="background-color: #f8f9fa; border-top: 2px solid #ddd; border-bottom: 2px solid #888;">
+                    <td class="text-left"><strong>Darrell &amp; Eric <span
+                                style="color: var(--color-primary-600); font-size: 0.75rem;">(Team Net)</span></strong>
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="font-weight: bold;">-</td>
+                    <td class="numeric"><strong>0</strong></td>
+                </tr>
+                
+                <!-- Individual Player Rows (Gross) -->
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Aaron <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+                <tr style="border-bottom: 1px solid #eee;">
+                    <td class="text-left" style="padding-left: 20px; color: #555; font-size: 0.8rem;">
+                        Kolby <span style="font-size: 0.7rem; color: #888;">(Gross)</span>
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    
+                    <td class="numeric" style="color: #666; padding: 4px;">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="color: #666; font-weight: bold;">-</td>
+                    <td class="numeric"></td>
+                </tr>
+                
+
+                <!-- Team Net Summary Row -->
+                <tr style="background-color: #f8f9fa; border-top: 2px solid #ddd; border-bottom: 2px solid #888;">
+                    <td class="text-left"><strong>Aaron &amp; Kolby <span
+                                style="color: var(--color-primary-600); font-size: 0.75rem;">(Team Net)</span></strong>
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    
+                    
+                    <td class="numeric"
+                        style="padding: 4px; font-weight: bold; ">
+                        -
+                    </td>
+                    
+                    <td class="numeric" style="font-weight: bold;">-</td>
+                    <td class="numeric"><strong>0</strong></td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
 
 <div class="btn-group" style="margin-top: var(--space-6);">
     <a href="#" class="disabled admin-only">Export Results (Admin only)</a>
