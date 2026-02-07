@@ -67,15 +67,19 @@
         <table class="data-table handicap-table">
             <thead>
                 <tr>
-                    <th class="text-left" style="width: 22%;">Player</th>
-                    <th class="numeric" style="width: 18%;"
+                    <th class="text-left" style="width: 15%;">Player</th>
+                    <th class="numeric" style="width: 14%;"
                         title="The current official index used for scoring. Updates only when the commissioner clicks Update.">
                         Current</th>
-                    <th class="numeric" style="width: 38%;"
+                    <th class="numeric" style="width: 24%;"
                         title="Calculated from BEST differentials in most recent pool. Follows USGA-style calculation (x0.96).">
                         Suggested (USGA)</th>
-                    <th class="numeric" style="width: 12%;">Effective Date</th>
-                    <th class="text-center" style="width: 140px;">Action</th>
+                    <th class="numeric" style="width: 24%;"
+                        title="Uses more differentials than USGA. Better for short-season leagues where players have fewer rounds.">
+                        League Friendly<br><span style="font-weight: normal; font-size: 10px;">(More forgiving for short
+                            seasons)</span></th>
+                    <th class="numeric" style="width: 10%;">Eff. Date</th>
+                    <th class="text-center" style="width: 160px;">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -112,11 +116,21 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <span class="text-muted">—</span>
+                        <div class="text-muted-sm" style="font-size: 10px;">Needs 3+ rounds</div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-01-23</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (5.8)</option>
+                                <option value="league_friendly" disabled>League (—)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
@@ -153,11 +167,35 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <div style="font-weight: 600;">0.6</div>
+                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                            Best rounds (League Friendly)<br>
+                            Pool: 4×18
+                             + 1×9 (pending 1)
+                            <br>
+                            Used:
+                            
+                            
+                            -3.8 (2026-02-04),
+                            
+                            
+                            5.0 (2026-02-04)
+                            
+                            
+                        </div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (-3.6)</option>
+                                <option value="league_friendly" >League (0.6)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
@@ -194,11 +232,35 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <div style="font-weight: 600;">10.2</div>
+                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                            Best rounds (League Friendly)<br>
+                            Pool: 3×18
+                             + 1×9 (pending 1)
+                            <br>
+                            Used:
+                            
+                            
+                            9.2 (2026-01-30),
+                            
+                            
+                            12.0 (2026-02-04)
+                            
+                            
+                        </div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (8.8)</option>
+                                <option value="league_friendly" >League (10.2)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
@@ -235,11 +297,35 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <div style="font-weight: 600;">12.4</div>
+                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                            Best rounds (League Friendly)<br>
+                            Pool: 3×18
+                            
+                            <br>
+                            Used:
+                            
+                            
+                            2.9 (2026-02-01),
+                            
+                            
+                            23.0 (2026-02-04)
+                            
+                            
+                        </div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (2.8)</option>
+                                <option value="league_friendly" >League (12.4)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
@@ -276,11 +362,21 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <span class="text-muted">—</span>
+                        <div class="text-muted-sm" style="font-size: 10px;">Needs 3+ rounds</div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-01-23</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (15.5)</option>
+                                <option value="league_friendly" disabled>League (—)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
@@ -317,11 +413,35 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <div style="font-weight: 600;">-2.5</div>
+                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                            Best rounds (League Friendly)<br>
+                            Pool: 3×18
+                             + 1×9 (pending 1)
+                            <br>
+                            Used:
+                            
+                            
+                            -6.3 (2026-02-01),
+                            
+                            
+                            1.0 (2026-02-04)
+                            
+                            
+                        </div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (-6.0)</option>
+                                <option value="league_friendly" >League (-2.5)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
@@ -358,11 +478,35 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <div style="font-weight: 600;">9.9</div>
+                        <div class="text-muted-sm" style="font-size: 11px; line-height: 1.2;">
+                            Best rounds (League Friendly)<br>
+                            Pool: 3×18
+                             + 1×9 (pending 1)
+                            <br>
+                            Used:
+                            
+                            
+                            6.6 (2026-01-30),
+                            
+                            
+                            14.0 (2026-02-04)
+                            
+                            
+                        </div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-01-23</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (6.3)</option>
+                                <option value="league_friendly" >League (9.9)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
@@ -399,11 +543,21 @@
                         </div>
                         
                     </td>
+                    <td class="numeric" style="vertical-align: top;">
+                        
+                        <span class="text-muted">—</span>
+                        <div class="text-muted-sm" style="font-size: 10px;">Needs 3+ rounds</div>
+                        
+                    </td>
                     <td class="numeric" style="vertical-align: top;">2026-02-01</td>
                     <td class="text-center" style="vertical-align: top;">
                         <form action="#"
-                            method="get">
-                            <input type="hidden" name="source" value="usga">
+                            method="get" style="display: flex; flex-direction: column; gap: 4px;">
+                            <select name="source" class="form-control form-control-sm" style="font-size: 12px;">
+                                <option value="usga" >USGA
+                                    (17.3)</option>
+                                <option value="league_friendly" disabled>League (—)</option>
+                            </select>
                             <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"  disabled disabled>(Admin only) Update</button>
                         </form>
                     </td>
