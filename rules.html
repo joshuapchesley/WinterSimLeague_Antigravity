@@ -128,7 +128,18 @@
         <p>Standard golf. Count every stroke.</p>
         <ul style="list-style: none; padding: 0;">
             <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Handicap Applied:</strong> 100%
-                of Course Handicap</li>
+                of Course Handicap per hole</li>
+        </ul>
+
+        <h4 style="margin-top: var(--space-6);">Team Best Ball</h4>
+        <p>Each player plays their own ball. The team takes the <strong>lowest net score</strong> on each hole.</p>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Handicap Applied:</strong> Each
+                player uses 100% of their Course Handicap per hole</li>
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Net Score:</strong> Gross -
+                Strokes Received (based on hole stroke index)</li>
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Team Score:</strong> Sum of
+                best net scores across all 18 holes</li>
         </ul>
     </div>
 </div>
@@ -165,59 +176,120 @@
             </li>
         </ul>
 
-        <h4 style="margin-top: var(--space-6);">Rounds Used by Count</h4>
-        <div class="table-wrap" style="max-width: 400px;">
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Total Rounds</th>
-                        <th class="numeric">Best Used</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>3 - 6</td>
-                        <td class="numeric">2</td>
-                    </tr>
-                    <tr>
-                        <td>7 - 8</td>
-                        <td class="numeric">3</td>
-                    </tr>
-                    <tr>
-                        <td>9 - 10</td>
-                        <td class="numeric">4</td>
-                    </tr>
-                    <tr>
-                        <td>11 - 12</td>
-                        <td class="numeric">5</td>
-                    </tr>
-                    <tr>
-                        <td>13 - 14</td>
-                        <td class="numeric">6</td>
-                    </tr>
-                    <tr>
-                        <td>15 - 16</td>
-                        <td class="numeric">7</td>
-                    </tr>
-                    <tr>
-                        <td>17 - 18</td>
-                        <td class="numeric">8</td>
-                    </tr>
-                    <tr>
-                        <td>19+</td>
-                        <td class="numeric">9-11</td>
-                    </tr>
-                </tbody>
-            </table>
+        <h4 style="margin-top: var(--space-6);">Rounds Used Tables</h4>
+        <p style="margin-bottom: var(--space-4);">The Handicaps page offers two suggested handicap options:</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-6);">
+            <!-- USGA Table -->
+            <div class="table-wrap" style="flex: 1; min-width: 280px;">
+                <h5 style="margin-bottom: var(--space-3);">USGA Suggested</h5>
+                <p
+                    style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-3);">
+                    Official USGA guidelines - more restrictive</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Total Rounds</th>
+                            <th class="numeric">Best Used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 - 5</td>
+                            <td class="numeric">1</td>
+                        </tr>
+                        <tr>
+                            <td>6 - 8</td>
+                            <td class="numeric">2</td>
+                        </tr>
+                        <tr>
+                            <td>9 - 11</td>
+                            <td class="numeric">3</td>
+                        </tr>
+                        <tr>
+                            <td>12 - 14</td>
+                            <td class="numeric">4</td>
+                        </tr>
+                        <tr>
+                            <td>15 - 16</td>
+                            <td class="numeric">5</td>
+                        </tr>
+                        <tr>
+                            <td>17 - 18</td>
+                            <td class="numeric">6</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td class="numeric">7</td>
+                        </tr>
+                        <tr>
+                            <td>20+</td>
+                            <td class="numeric">8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- League Friendly Table -->
+            <div class="table-wrap" style="flex: 1; min-width: 280px;">
+                <h5 style="margin-bottom: var(--space-3);">League Friendly Suggested</h5>
+                <p
+                    style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-3);">
+                    More generous for short-season leagues</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Total Rounds</th>
+                            <th class="numeric">Best Used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3 - 6</td>
+                            <td class="numeric">2</td>
+                        </tr>
+                        <tr>
+                            <td>7 - 8</td>
+                            <td class="numeric">3</td>
+                        </tr>
+                        <tr>
+                            <td>9 - 10</td>
+                            <td class="numeric">4</td>
+                        </tr>
+                        <tr>
+                            <td>11 - 12</td>
+                            <td class="numeric">5</td>
+                        </tr>
+                        <tr>
+                            <td>13 - 14</td>
+                            <td class="numeric">6</td>
+                        </tr>
+                        <tr>
+                            <td>15 - 16</td>
+                            <td class="numeric">7</td>
+                        </tr>
+                        <tr>
+                            <td>17 - 18</td>
+                            <td class="numeric">8</td>
+                        </tr>
+                        <tr>
+                            <td>19+</td>
+                            <td class="numeric">9-10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <div class="alert alert-info" style="margin-top: var(--space-6);">
-            <strong>Example Calculation (6 rounds):</strong>
+            <strong>Example Calculation (5 rounds):</strong>
             <p style="margin: var(--space-2) 0;">Rounds: 85 (13.0), <strong>82 (10.0)</strong>, 88 (16.0), 84 (12.0),
-                <strong>81 (9.0)</strong>, 83 (11.0)
+                <strong>81 (9.0)</strong>
             </p>
-            <p style="margin: var(--space-2) 0;">With 6 rounds, use the best 2 differentials: (9.0 + 10.0) ÷ 2 = 9.5 ×
-                0.96 = <strong>9.1</strong> Handicap Index</p>
+            <p style="margin: var(--space-2) 0;"><strong>USGA:</strong> Best 1 differential: 9.0 × 0.96 =
+                <strong>8.6</strong> Handicap Index</p>
+            <p style="margin: var(--space-2) 0;"><strong>League Friendly:</strong> Best 2 differentials: (9.0 + 10.0) ÷
+                2 = 9.5 × 0.96 = <strong>9.1</strong> Handicap Index</p>
         </div>
 
         <div class="alert alert-warning" style="margin-top: var(--space-4);">
