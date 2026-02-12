@@ -68,6 +68,14 @@
                 <input type="text" name="tee_name" id="tee_name" class="form-control" placeholder="e.g., Blue Tee">
                 <p class="form-help-text">Optional: Blue, White, Red, etc.</p>
             </div>
+            <div class="form-group">
+                <label for="rating">Course Rating</label>
+                <input type="number" name="rating" id="rating" class="form-control" step="0.1" placeholder="e.g. 72.0">
+            </div>
+            <div class="form-group">
+                <label for="slope">Slope Rating</label>
+                <input type="number" name="slope" id="slope" class="form-control" placeholder="e.g. 113">
+            </div>
         </div>
 
         <div class="hole-par-grid">
@@ -183,7 +191,7 @@
         </div>
 
         <div class="form-actions">
-            <button type="submit" class="btn btn-primary" disabled>Save Pars</button>
+            <button type="submit" class="btn btn-primary" disabled>Save Pars & Ratings</button>
         </div>
     </form>
 </div>
@@ -197,6 +205,7 @@
                 <tr>
                     <th>Course</th>
                     <th>Tee</th>
+                    <th>Rating / Slope</th>
                     <th>Status</th>
                     <th>Action</th>
                 </tr>
@@ -206,11 +215,17 @@
                 <tr>
                     <td><strong>Belvedere Golf Club</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        <span class="text-muted">—</span>
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="Belvedere Golf Club" data-tee="Blue"
-                            data-pars="{"1": 4, "2": 4, "3": 4, "4": 3, "5": 5, "6": 4, "7": 4, "8": 3, "9": 5, "10": 5, "11": 4, "12": 4, "13": 4, "14": 3, "15": 5, "16": 4, "17": 3, "18": 4}" disabled>(Admin only) 
+                            data-rating="" data-slope=""
+                            data-pars='{"1": 4, "2": 4, "3": 4, "4": 3, "5": 5, "6": 4, "7": 4, "8": 3, "9": 5, "10": 5, "11": 4, "12": 4, "13": 4, "14": 3, "15": 5, "16": 4, "17": 3, "18": 4}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -219,11 +234,17 @@
                 <tr>
                     <td><strong>Castle Pines Golf Club</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        <span class="text-muted">—</span>
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="Castle Pines Golf Club" data-tee="Blue"
-                            data-pars="{"1": 5, "2": 4, "3": 4, "4": 3, "5": 4, "6": 4, "7": 3, "8": 5, "9": 4, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 4, "17": 3, "18": 4}" disabled>(Admin only) 
+                            data-rating="" data-slope=""
+                            data-pars='{"1": 5, "2": 4, "3": 4, "4": 3, "5": 4, "6": 4, "7": 3, "8": 5, "9": 4, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 4, "17": 3, "18": 4}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -232,11 +253,17 @@
                 <tr>
                     <td><strong>DPC Pebble</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        74.7 / 143
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="DPC Pebble" data-tee="Blue"
-                            data-pars="{"1": 4, "2": 5, "3": 4, "4": 4, "5": 3, "6": 5, "7": 3, "8": 4, "9": 4, "10": 4, "11": 4, "12": 3, "13": 4, "14": 5, "15": 4, "16": 4, "17": 3, "18": 5}" disabled>(Admin only) 
+                            data-rating="74.7" data-slope="143"
+                            data-pars='{"1": 4, "2": 5, "3": 4, "4": 4, "5": 3, "6": 5, "7": 3, "8": 4, "9": 4, "10": 4, "11": 4, "12": 3, "13": 4, "14": 5, "15": 4, "16": 4, "17": 3, "18": 5}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -245,11 +272,17 @@
                 <tr>
                     <td><strong>DPC Scottsdale</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        72.5 / 130
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="DPC Scottsdale" data-tee="Blue"
-                            data-pars="{"1": 4, "2": 4, "3": 5, "4": 3, "5": 4, "6": 4, "7": 3, "8": 4, "9": 4, "10": 4, "11": 4, "12": 3, "13": 5, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}" disabled>(Admin only) 
+                            data-rating="72.5" data-slope="130"
+                            data-pars='{"1": 4, "2": 4, "3": 5, "4": 3, "5": 4, "6": 4, "7": 3, "8": 4, "9": 4, "10": 4, "11": 4, "12": 3, "13": 5, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -258,11 +291,17 @@
                 <tr>
                     <td><strong>Minnehaha Country Club</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        <span class="text-muted">—</span>
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="Minnehaha Country Club" data-tee="Blue"
-                            data-pars="{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}" disabled>(Admin only) 
+                            data-rating="" data-slope=""
+                            data-pars='{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -271,11 +310,17 @@
                 <tr>
                     <td><strong>Minnehaha Country Club</strong></td>
                     <td>Yellow</td>
+                    <td>
+                        
+                        <span class="text-muted">—</span>
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="Minnehaha Country Club" data-tee="Yellow"
-                            data-pars="{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}" disabled>(Admin only) 
+                            data-rating="" data-slope=""
+                            data-pars='{"1": 4, "2": 3, "3": 4, "4": 5, "5": 4, "6": 3, "7": 5, "8": 3, "9": 4, "10": 3, "11": 4, "12": 5, "13": 4, "14": 4, "15": 4, "16": 5, "17": 3, "18": 4}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -284,11 +329,17 @@
                 <tr>
                     <td><strong>ParMar Valley Country Club</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        <span class="text-muted">—</span>
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="ParMar Valley Country Club" data-tee="Blue"
-                            data-pars="{"1": 4, "2": 3, "3": 5, "4": 4, "5": 4, "6": 3, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 5, "13": 4, "14": 4, "15": 3, "16": 4, "17": 3, "18": 5}" disabled>(Admin only) 
+                            data-rating="" data-slope=""
+                            data-pars='{"1": 4, "2": 3, "3": 5, "4": 4, "5": 4, "6": 3, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 5, "13": 4, "14": 4, "15": 3, "16": 4, "17": 3, "18": 5}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -297,11 +348,17 @@
                 <tr>
                     <td><strong>Pine Needles Lodge and Golf Club</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        <span class="text-muted">—</span>
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="Pine Needles Lodge and Golf Club" data-tee="Blue"
-                            data-pars="{"1": 5, "2": 4, "3": 3, "4": 4, "5": 3, "6": 4, "7": 4, "8": 4, "9": 4, "10": 5, "11": 4, "12": 4, "13": 3, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}" disabled>(Admin only) 
+                            data-rating="" data-slope=""
+                            data-pars='{"1": 5, "2": 4, "3": 3, "4": 4, "5": 3, "6": 4, "7": 4, "8": 4, "9": 4, "10": 5, "11": 4, "12": 4, "13": 3, "14": 4, "15": 5, "16": 3, "17": 4, "18": 4}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -310,11 +367,17 @@
                 <tr>
                     <td><strong>Torrey South</strong></td>
                     <td>Blue</td>
+                    <td>
+                        
+                        <span class="text-muted">—</span>
+                        
+                    </td>
                     <td><span class="badge badge-success">Saved</span></td>
                     <td>
                         <button type="button" class="btn btn-sm btn-outline edit-course-btn"
                             data-course="Torrey South" data-tee="Blue"
-                            data-pars="{"1": 4, "2": 4, "3": 3, "4": 4, "5": 4, "6": 5, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 3, "17": 4, "18": 5}" disabled>(Admin only) 
+                            data-rating="" data-slope=""
+                            data-pars='{"1": 4, "2": 4, "3": 3, "4": 4, "5": 4, "6": 5, "7": 4, "8": 3, "9": 5, "10": 4, "11": 3, "12": 4, "13": 5, "14": 4, "15": 4, "16": 3, "17": 4, "18": 5}' disabled>(Admin only) 
                             Edit
                         </button>
                     </td>
@@ -331,6 +394,8 @@
         const form = document.querySelector('form');
         const courseInput = document.getElementById('course_name');
         const teeInput = document.getElementById('tee_name');
+        const ratingInput = document.getElementById('rating');
+        const slopeInput = document.getElementById('slope');
         const submitBtn = form.querySelector('button[type="submit"]');
 
         // Add Cancel button
@@ -350,12 +415,16 @@
                 try {
                     const courseName = this.dataset.course;
                     const teeName = this.dataset.tee;
+                    const rating = this.dataset.rating;
+                    const slope = this.dataset.slope;
                     const pars = JSON.parse(this.dataset.pars);
 
                     console.log('Editing course:', courseName, teeName); // Debug output
 
                     courseInput.value = courseName;
                     teeInput.value = teeName;
+                    ratingInput.value = rating;
+                    slopeInput.value = slope;
 
                     // Populate pars
                     for (let holeNum = 1; holeNum <= 18; holeNum++) {
@@ -369,7 +438,7 @@
 
                     // Show cancel button and change submit text
                     cancelBtn.style.display = 'inline-block';
-                    submitBtn.textContent = 'Update Pars';
+                    submitBtn.textContent = 'Update Course';
 
                     // Scroll to top
                     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -389,10 +458,13 @@
             console.log('Cancelling edit');
             form.reset();
             cancelBtn.style.display = 'none';
-            submitBtn.textContent = 'Save Pars';
+            submitBtn.textContent = 'Save Pars & Ratings';
 
             // Reset to defaults (optional, but good for UI)
             document.querySelectorAll('input[type="number"]').forEach(input => input.value = 4);
+            // Clear specific fields
+            ratingInput.value = '';
+            slopeInput.value = '';
         });
     });
 </script>
