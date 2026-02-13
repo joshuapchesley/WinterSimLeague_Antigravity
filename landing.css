@@ -25,13 +25,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: 
+  background:
     radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
   pointer-events: none;
 }
 
-.hero > * {
+.hero>* {
   position: relative;
   z-index: 1;
 }
@@ -301,20 +301,41 @@
 }
 
 .matchup-players {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-3);
+  margin-bottom: 0;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-info strong {
   font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-semibold);
-  color: var(--color-text-primary);
-  margin-bottom: var(--space-2);
-}
-
-.matchup-players strong {
   color: var(--color-primary-600);
+  line-height: 1.2;
 }
 
-.matchup-handicap {
+.player-hcp {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   font-family: var(--font-mono);
+  margin-top: var(--space-1);
+}
+
+.vs-divider {
+  color: var(--color-text-tertiary);
+  font-weight: var(--font-weight-bold);
+  padding-top: var(--space-1);
+}
+
+.matchup-handicap {
+  display: none;
+  /* Hide old combined handicap class if still present */
 }
 
 .info-box {
