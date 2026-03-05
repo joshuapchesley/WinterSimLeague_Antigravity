@@ -86,7 +86,11 @@
                 
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Aaron</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_1.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Aaron
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -154,7 +158,11 @@
                 </tr>
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Beers</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_4.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Beers
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -219,7 +227,11 @@
                 </tr>
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Chez</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_3.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Chez
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -296,7 +308,11 @@
                 </tr>
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Darrell</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_7.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Darrell
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -364,7 +380,11 @@
                 </tr>
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Eric</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_2.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Eric
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -429,7 +449,11 @@
                 </tr>
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Kolby</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_6.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Kolby
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -500,7 +524,11 @@
                 </tr>
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Tony</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_5.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Tony
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -577,7 +605,11 @@
                 </tr>
                 
                 <tr>
-                    <td class="text-left" style="vertical-align: top;"><strong>Tory</strong></td>
+                    <td class="text-left" style="vertical-align: top;">
+                        <strong><a href="player_history_8.html"
+                                style="text-decoration: none; color: var(--color-primary-600);">Tory
+                                <span style="font-size: 0.8em;">📈</span></a></strong>
+                    </td>
                     <td class="numeric" style="vertical-align: top;">
                         
                         <div
@@ -764,6 +796,11 @@
     // Allow per-week results pages (week_<n>.html pattern)
     if(/^week_\d+\.html$/.test(href)) {
       return; // Allow per-week results links
+    }
+    
+    // Allow player history links
+    if(/^player_history_\d+\.html$/.test(href)) {
+      return; 
     }
     
     // Allow fallback week_results.html

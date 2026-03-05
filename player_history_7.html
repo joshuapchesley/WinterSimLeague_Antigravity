@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
-    <title>Season Leaderboard - Winter Golf League</title>
+    <title>Darrell - Handicap History</title>
 
     <!-- Design System: Tokens, Typography, Colors -->
     <link rel="stylesheet" href="theme.css">
@@ -53,115 +53,80 @@
 
 <div class="page-header">
     <div>
-        <h1>Season Leaderboard</h1>
+        <h1>Darrell - Handicap History</h1>
+        <p class="text-muted" style="margin-top: 5px;">
+            Current Handicap:
+            <strong>
+                
+                4.6 (as of 2026-03-05)
+                
+            </strong>
+        </p>
     </div>
     <div class="header-actions">
-        <a href="#" class="disabled admin-only">Export (Admin only)</a>
+        <a href="handicaps.html" class="btn btn-secondary">&larr; Back to Handicaps</a>
+    </div>
+</div>
+
+<div class="card" style="margin-bottom: var(--space-8);">
+    <div class="card-header">
+        <h3>Handicap Trend</h3>
+    </div>
+    <div style="padding: var(--space-4); height: 300px; display: flex; align-items: center; justify-content: center;">
+        
+        <canvas id="handicapChart"></canvas>
+        
     </div>
 </div>
 
 <div class="card">
+    <div class="card-header">
+        <h3>History Details</h3>
+    </div>
     <div class="table-wrap">
         <table class="data-table">
             <thead>
                 <tr>
-                    <th class="numeric" style="width: 60px;">Rank</th>
-                    <th class="text-left">Player</th>
-                    <th class="numeric">Points</th>
-                    <th class="numeric">Weeks</th>
-                    <th class="numeric">Avg Net</th>
-                    <th class="numeric">Avg Place</th>
+                    <th class="text-left">Date</th>
+                    <th class="numeric">Handicap Index</th>
+                    <th class="numeric">Rounds Used</th>
+                    <th class="text-left">Notes</th>
                 </tr>
             </thead>
             <tbody>
                 
                 
                 <tr>
-                    <td class="numeric">
-                        <strong>🥇</strong>
+                    <td class="text-left">2026-03-05</td>
+                    <td class="numeric"><strong>4.6</strong></td>
+                    <td class="numeric">2</td>
+                    <td class="text-left text-muted-sm">
+                        
+                        <span class="badge badge-secondary">Override</span> System Correction (Differential Fix)
+                        
                     </td>
-                    <td class="text-left"><strong>Darrell</strong></td>
-                    <td class="numeric"><strong>23</strong></td>
-                    <td class="numeric">5</td>
-                    <td class="numeric">62.2</td>
-                    <td class="numeric">1.4</td>
                 </tr>
                 
                 <tr>
-                    <td class="numeric">
-                        <strong>🥈</strong>
+                    <td class="text-left">2026-02-07</td>
+                    <td class="numeric"><strong>12.4</strong></td>
+                    <td class="numeric">2</td>
+                    <td class="text-left text-muted-sm">
+                        
+                        <span class="badge badge-secondary">Override</span> Applied League Friendly Handicap
+                        
                     </td>
-                    <td class="text-left"><strong>Beers</strong></td>
-                    <td class="numeric"><strong>18</strong></td>
-                    <td class="numeric">5</td>
-                    <td class="numeric">61.4</td>
-                    <td class="numeric">2.4</td>
                 </tr>
                 
                 <tr>
-                    <td class="numeric">
-                        <strong>🥉</strong>
+                    <td class="text-left">2026-02-01</td>
+                    <td class="numeric"><strong>16.7</strong></td>
+                    <td class="numeric">3</td>
+                    <td class="text-left text-muted-sm">
+                        
+                        System Calculation
+                        
                     </td>
-                    <td class="text-left"><strong>Chez</strong></td>
-                    <td class="numeric"><strong>18</strong></td>
-                    <td class="numeric">5</td>
-                    <td class="numeric">61.4</td>
-                    <td class="numeric">2.4</td>
-                </tr>
-                
-                <tr>
-                    <td class="numeric">
-                        <strong>4</strong>
-                    </td>
-                    <td class="text-left"><strong>Kolby</strong></td>
-                    <td class="numeric"><strong>17</strong></td>
-                    <td class="numeric">5</td>
-                    <td class="numeric">61.6</td>
-                    <td class="numeric">2.6</td>
-                </tr>
-                
-                <tr>
-                    <td class="numeric">
-                        <strong>5</strong>
-                    </td>
-                    <td class="text-left"><strong>Aaron</strong></td>
-                    <td class="numeric"><strong>16</strong></td>
-                    <td class="numeric">5</td>
-                    <td class="numeric">60.8</td>
-                    <td class="numeric">2.8</td>
-                </tr>
-                
-                <tr>
-                    <td class="numeric">
-                        <strong>6</strong>
-                    </td>
-                    <td class="text-left"><strong>Eric</strong></td>
-                    <td class="numeric"><strong>14</strong></td>
-                    <td class="numeric">4</td>
-                    <td class="numeric">62.7</td>
-                    <td class="numeric">2.5</td>
-                </tr>
-                
-                <tr>
-                    <td class="numeric">
-                        <strong>7</strong>
-                    </td>
-                    <td class="text-left"><strong>Tony</strong></td>
-                    <td class="numeric"><strong>14</strong></td>
-                    <td class="numeric">5</td>
-                    <td class="numeric">61.8</td>
-                    <td class="numeric">3.2</td>
-                </tr>
-                
-                <tr>
-                    <td class="numeric">
-                        <strong>8</strong>
-                    </td>
-                    <td class="text-left"><strong>Tory</strong></td>
-                    <td class="numeric"><strong>13</strong></td>
-                    <td class="numeric">4</td>
-                    <td class="numeric">64.7</td>
-                    <td class="numeric">2.8</td>
                 </tr>
                 
                 
@@ -170,13 +135,86 @@
     </div>
 </div>
 
-<div class="alert alert-info" style="margin-top: var(--space-6);">
-    <div>
-        <strong>How the Leaderboard Works</strong>
-        <p style="margin: var(--space-2) 0 0 0;">Rankings are based on total points awarded. Ties are broken by
-            consistency (fewest weeks played). Points are calculated from net scores after handicaps are applied.</p>
-    </div>
-</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const ctx = document.getElementById('handicapChart').getContext('2d');
+
+        // Parse backend data
+        const historyData = [
+            
+        {
+            date: '2026-02-01',
+            index: 16.7
+        }, 
+    
+        {
+            date: '2026-02-07',
+            index: 12.4
+        }, 
+    
+        {
+            date: '2026-03-05',
+            index: 4.6
+        }
+    
+    ];
+
+    if (historyData.length === 0) return;
+
+    const labels = historyData.map(d => d.date);
+    const dataPoints = historyData.map(d => d.index);
+
+    // Make chart
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Handicap Index',
+                data: dataPoints,
+                borderColor: '#1e40af', // Primary 800
+                backgroundColor: 'rgba(30, 64, 175, 0.1)',
+                borderWidth: 2,
+                pointBackgroundColor: '#1e40af',
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                fill: true,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            return 'Index: ' + context.parsed.y;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    suggestedMin: Math.max(0, Math.min(...dataPoints) - 2),
+                    suggestedMax: Math.max(...dataPoints) + 2,
+                }
+            }
+        }
+    });
+});
+</script>
+
 
 
     </main>

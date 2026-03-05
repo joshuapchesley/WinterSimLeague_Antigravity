@@ -200,6 +200,11 @@
       return; // Allow per-week results links
     }
     
+    // Allow player history links
+    if(/^player_history_\d+\.html$/.test(href)) {
+      return; 
+    }
+    
     // Allow fallback week_results.html
     if(href === "week_results.html") {
       return; // Allow fallback results page
