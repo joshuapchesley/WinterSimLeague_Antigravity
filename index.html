@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
+    <title>Home - Winter Golf League</title>
+
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+
+    <!-- Page Layout: Navigation, Footer -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+<link rel="stylesheet" href="landing.css">
+
+
+    <!-- Responsive Overrides -->
+    <link rel="stylesheet" href="mobile.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="weeks.html">Weeks</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="handicaps.html">Handicaps</a></li>
+                <li><a href="coursepars.html">Course Pars</a></li>
+                <li><a href="#" class="disabled admin-only">Import (Admin only)</a></li>
+                <li><a href="allstats.html">Stats</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        
+        
+
+        
+
+<!-- FEATURED ACTIONS -->
+<div class="featured-grid" style="margin-bottom: var(--space-12);">
+    <div class="featured-card">
+        <div class="featured-card-header"></div>
+        <div class="featured-card-body">
+            <h3 class="featured-card-title">Setup & Management</h3>
+            <p class="featured-card-description">Manage players, configure weeks, and set course parameters for your
+                league.</p>
+            <div class="featured-card-actions">
+                <a href="#" class="disabled admin-only">Add Player (Admin only)</a>
+                <a href="#" class="disabled admin-only">New Week (Admin only)</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-card">
+        <div class="featured-card-header"></div>
+        <div class="featured-card-body">
+            <h3 class="featured-card-title">Scoring & Results</h3>
+            <p class="featured-card-description">Enter scores, view weekly results, and track season standings with live
+                calculations.</p>
+            <div class="featured-card-actions">
+                <a href="weeks.html" class="btn btn-primary btn-sm">View Weeks</a>
+                <a href="leaderboard.html" class="btn btn-secondary btn-sm">Leaderboard</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-card">
+        <div class="featured-card-header"></div>
+        <div class="featured-card-body">
+            <h3 class="featured-card-title">Handicap System</h3>
+            <p class="featured-card-description">Track handicaps, add stroke play rounds, and manage your players'
+                indices.</p>
+            <div class="featured-card-actions">
+                <a href="handicaps.html" class="btn btn-primary btn-sm">View Handicaps</a>
+                <a href="#" class="disabled admin-only">Add Round (Admin only)</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SUGGESTED MATCHUPS -->
+<div class="matchups-section">
+    <div class="matchups-header">
+        <h2>Suggested Pairings</h2>
+        <form action="#" method="get">
+            <button type="submit" class="btn btn-outline" disabled>Regenerate</button>
+        </form>
+    </div>
+
+    
+    <div class="matchup-grid">
+        
+        <div class="matchup-card">
+            <div class="matchup-number">Match 1</div>
+            <div class="matchup-players">
+                <div class="player-info">
+                    <strong>Tony</strong>
+                    <span class="player-hcp">(8.7)</span>
+                </div>
+                <div class="vs-divider">&</div>
+                <div class="player-info">
+                    <strong>Darrell</strong>
+                    <span class="player-hcp">(4.6)</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="matchup-card">
+            <div class="matchup-number">Match 2</div>
+            <div class="matchup-players">
+                <div class="player-info">
+                    <strong>Chez</strong>
+                    <span class="player-hcp">(8.0)</span>
+                </div>
+                <div class="vs-divider">&</div>
+                <div class="player-info">
+                    <strong>Eric</strong>
+                    <span class="player-hcp">(2.0)</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="matchup-card">
+            <div class="matchup-number">Match 3</div>
+            <div class="matchup-players">
+                <div class="player-info">
+                    <strong>Kolby</strong>
+                    <span class="player-hcp">(-4.3)</span>
+                </div>
+                <div class="vs-divider">&</div>
+                <div class="player-info">
+                    <strong>Beers</strong>
+                    <span class="player-hcp">(4.1)</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="matchup-card">
+            <div class="matchup-number">Match 4</div>
+            <div class="matchup-players">
+                <div class="player-info">
+                    <strong>Tory</strong>
+                    <span class="player-hcp">(12.3)</span>
+                </div>
+                <div class="vs-divider">&</div>
+                <div class="player-info">
+                    <strong>Aaron</strong>
+                    <span class="player-hcp">(4.9)</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <p
+        style="margin-top: var(--space-4); font-style: italic; color: var(--color-text-tertiary); text-align: center; font-size: var(--font-size-sm);">
+        Prioritizing variety in playing partners
+    </p>
+    
+</div>
+
+<!-- SYSTEM PRINCIPLES -->
+<div class="card" style="margin-bottom: var(--space-12);">
+    <div class="card-header">
+        <h3>System Principles</h3>
+    </div>
+    <div class="card-body">
+        <div class="grid grid-auto">
+            <div class="info-section">
+                <h4>Single Source of Truth</h4>
+                <p>All results originate from one authoritative data store, ensuring consistency across the entire
+                    system.</p>
+            </div>
+            <div class="info-section">
+                <h4>Intentional Handicaps</h4>
+                <p>Suggested handicaps are calculated automatically, but updates are deliberate and transparent to
+                    everyone.</p>
+            </div>
+            <div class="info-section">
+                <h4>Historical Integrity</h4>
+                <p>Past results are never retroactively altered. Handicap changes only affect future rounds and
+                    standings.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WORKFLOW SECTION -->
+<div class="workflow-section">
+    <h2>League Workflow</h2>
+    <div class="workflow-steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Setup Week</h3>
+            <p>Define the week structure: date, course, format, and participants</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Enter Scores</h3>
+            <p>Record gross scores for each entry (one-time data entry)</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Auto-Calculate</h3>
+            <p>System applies handicaps, calculates net scores, ranks, and awards points</p>
+        </div>
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Review Results</h3>
+            <p>View weekly leaderboards and updated season standings</p>
+        </div>
+    </div>
+</div>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
+        </div>
+    </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    
+    const href = (a.getAttribute("href") || "").trim();
+    
+    // FIRST: Check for View Results exception by class
+    if(a.classList.contains("view-results-link")) {
+      return; // Allow View Results links to navigate
+    }
+    
+    // Allow per-week results pages (week_<n>.html pattern)
+    if(/^week_\d+\.html$/.test(href)) {
+      return; // Allow per-week results links
+    }
+    
+    // Allow player history links
+    if(/^player_history_\d+\.html$/.test(href)) {
+      return; 
+    }
+    
+    // Allow fallback week_results.html
+    if(href === "week_results.html") {
+      return; // Allow fallback results page
+    }
+    
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
+
+<script>
+(function(){
+  const nav = document.querySelector('nav.navbar');
+  const toggle = document.querySelector('.nav-toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+      const isOpen = nav.classList.contains('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+
+</html>
