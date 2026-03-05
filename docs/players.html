@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
+    <title>Players - Winter Golf League</title>
+
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+
+    <!-- Page Layout: Navigation, Footer -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+
+    <!-- Responsive Overrides -->
+    <link rel="stylesheet" href="mobile.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="weeks.html">Weeks</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="handicaps.html">Handicaps</a></li>
+                <li><a href="coursepars.html">Course Pars</a></li>
+                <li><a href="#" class="disabled admin-only">Import (Admin only)</a></li>
+                <li><a href="allstats.html">Stats</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        
+        
+
+        
+
+<div class="page-header">
+    <div>
+        <h1>Players</h1>
+    </div>
+    <div class="header-actions">
+        <a href="#" class="disabled admin-only">+ Add Player (Admin only)</a>
+        <a href="#" class="disabled admin-only">Export (Admin only)</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="table-wrap">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Joined</th>
+                    <th style="width: 160px; text-align: right;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                <tr>
+                    <td>
+                        <strong>Aaron</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:38:39</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Aaron? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Beers</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:39:05</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Beers? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Chez</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:38:57</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Chez? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Darrell</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:39:29</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Darrell? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Eric</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:38:50</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Eric? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Kolby</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:39:19</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Kolby? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Smurf</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-secondary">Inactive</span>
+                        
+                    </td>
+                    <td>2026-01-27 22:24:43</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Activate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Smurf? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Tony</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:39:13</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Tony? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                        <strong>Tory</strong>
+                    </td>
+                    <td>
+                        
+                        <span class="badge badge-success">Active</span>
+                        
+                    </td>
+                    <td>2026-01-27 19:40:01</td>
+                    <td style="text-align: right;">
+                        <form action="#" method="get"
+                            style="display:inline;">
+                            <button type="submit" class="btn btn-sm btn-outline" disabled>
+                                Deactivate
+                            </button>
+                            </button>
+                        </form>
+                        <form action="#" method="get"
+                            style="display:inline;"
+                            onsubmit="return confirm('Are you sure you want to delete Tory? This action cannot be undone.');">
+                            <button type="submit" class="btn btn-sm btn-danger"
+                                style="margin-left: 4px; background-color: #dc3545; border-color: #dc3545; color: white;" disabled disabled>(Admin only) Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
+        </div>
+    </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    
+    const href = (a.getAttribute("href") || "").trim();
+    
+    // FIRST: Check for View Results exception by class
+    if(a.classList.contains("view-results-link")) {
+      return; // Allow View Results links to navigate
+    }
+    
+    // Allow per-week results pages (week_<n>.html pattern)
+    if(/^week_\d+\.html$/.test(href)) {
+      return; // Allow per-week results links
+    }
+    
+    // Allow player history links
+    if(/^player_history_\d+\.html$/.test(href)) {
+      return; 
+    }
+    
+    // Allow fallback week_results.html
+    if(href === "week_results.html") {
+      return; // Allow fallback results page
+    }
+    
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
+
+<script>
+(function(){
+  const nav = document.querySelector('nav.navbar');
+  const toggle = document.querySelector('.nav-toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+      const isOpen = nav.classList.contains('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+
+</html>

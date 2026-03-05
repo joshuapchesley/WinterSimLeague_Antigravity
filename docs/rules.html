@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
+    <title>League Rules & Information - Winter Golf League</title>
+
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+
+    <!-- Page Layout: Navigation, Footer -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+
+    <!-- Responsive Overrides -->
+    <link rel="stylesheet" href="mobile.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="weeks.html">Weeks</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="handicaps.html">Handicaps</a></li>
+                <li><a href="coursepars.html">Course Pars</a></li>
+                <li><a href="#" class="disabled admin-only">Import (Admin only)</a></li>
+                <li><a href="allstats.html">Stats</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        
+        
+
+        
+
+<div class="page-header">
+    <h1>League Rules & Information</h1>
+    <p class="text-secondary" style="margin: 0; font-size: var(--font-size-sm);">How the Winter Golf League system works
+    </p>
+</div>
+
+<!-- SCORING SECTION -->
+<div class="card">
+    <div class="card-header">
+        <h3>Scoring System</h3>
+    </div>
+    <div class="card-body">
+        <p>The league uses a cumulative point system to determine season standings.</p>
+
+        <h4 style="margin-top: var(--space-6);">Weekly Points (The Ladder)</h4>
+        <p>Points are awarded based on Net Score ranking each week:</p>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-3); margin: var(--space-6) 0;">
+            <div
+                style="padding: var(--space-4); background: var(--color-bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--color-success);">
+                <div style="font-size: var(--font-size-lg); font-weight: bold; color: var(--color-success);">5 pts</div>
+                <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">1st Place</div>
+            </div>
+            <div
+                style="padding: var(--space-4); background: var(--color-bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--color-success);">
+                <div style="font-size: var(--font-size-lg); font-weight: bold; color: var(--color-success);">4 pts</div>
+                <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">2nd Place</div>
+            </div>
+            <div
+                style="padding: var(--space-4); background: var(--color-bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--color-success);">
+                <div style="font-size: var(--font-size-lg); font-weight: bold; color: var(--color-success);">3 pts</div>
+                <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">3rd Place</div>
+            </div>
+            <div
+                style="padding: var(--space-4); background: var(--color-bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--color-warning);">
+                <div style="font-size: var(--font-size-lg); font-weight: bold; color: var(--color-warning);">2 pts</div>
+                <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">4th Place</div>
+            </div>
+            <div
+                style="padding: var(--space-4); background: var(--color-bg-secondary); border-radius: var(--radius-md); border-left: 4px solid var(--color-warning);">
+                <div style="font-size: var(--font-size-lg); font-weight: bold; color: var(--color-warning);">1 pt</div>
+                <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">5th Place</div>
+            </div>
+        </div>
+
+        <div class="alert alert-info" style="margin-top: var(--space-6);">
+            <strong>Tie Breaker:</strong> If players/teams tie for a position, the points are split equally.
+            <br><em style="font-size: var(--font-size-sm);">Example: Two teams tie for 1st place split points: (5 + 4) ÷
+                2 = 4.5 points each</em>
+        </div>
+    </div>
+</div>
+
+<!-- FORMATS SECTION -->
+<div class="card">
+    <div class="card-header">
+        <h3>Formats & Handicaps</h3>
+    </div>
+    <div class="card-body">
+        <p>Different formats use different handicap calculations to ensure fair play.</p>
+
+        <h4 style="margin-top: var(--space-6);">Team Scramble</h4>
+        <p>All players tee off, select the best shot, and play from there until the ball is holed.</p>
+        <p><strong>Team Handicap Calculation:</strong></p>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>2-Person Team:</strong> 35% Low
+                + 15% High</li>
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>3-Person Team:</strong> 30% Low
+                + 20% Mid + 10% High</li>
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>4-Person Team:</strong> 25% A +
+                20% B + 15% C + 10% D</li>
+        </ul>
+
+        <h4 style="margin-top: var(--space-6);">Individual Stroke Play</h4>
+        <p>Standard golf. Count every stroke.</p>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Handicap Applied:</strong> 100%
+                of Course Handicap per hole</li>
+        </ul>
+
+        <h4 style="margin-top: var(--space-6);">Team Best Ball</h4>
+        <p>Each player plays their own ball. The team takes the <strong>lowest net score</strong> on each hole.</p>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Handicap Applied:</strong> Each
+                player uses 100% of their Course Handicap per hole</li>
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Net Score:</strong> Gross -
+                Strokes Received (based on hole stroke index)</li>
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Team Score:</strong> Sum of
+                best net scores across all 18 holes</li>
+        </ul>
+
+        <h4 style="margin-top: var(--space-6);">Team Stableford</h4>
+        <p>A points-based game where higher is better. Teams accumulate points based on the sum of each player's
+            individual performance.</p>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Objective:</strong> Highest
+                Total Team Points.</li>
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Team Score:</strong> Sum of
+                <em>all</em> players' points.</li>
+
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>How Handicaps Work:</strong>
+                <ul
+                    style="padding-left: var(--space-4); margin-top: var(--space-2); color: var(--color-text-secondary); font-size: 0.9em;">
+                    <li style="margin-bottom: 4px;"><strong>1. Course Handicap:</strong> Calculated for each player
+                        based on the tee played.</li>
+                    <li style="margin-bottom: 4px;"><strong>2. Strokes Received:</strong> Players receive strokes on
+                        holes where the <em>Hole Stroke Index (SI)</em> is less than or equal to their Course Handicap.
+                        <br><em>(e.g. A 10 handicap gets 1 stroke on rules 1–10).</em>
+                    </li>
+                    <li style="margin-bottom: 4px;"><strong>3. Net Score:</strong> Gross Score minus Strokes Received
+                        for that hole.</li>
+                </ul>
+            </li>
+
+            <li style="padding: var(--space-2) 0; padding-left: var(--space-6);"><strong>Points (based on Net
+                    Score):</strong>
+                <ul style="padding-left: var(--space-4); margin-top: var(--space-2);">
+                    <li><strong>Net Double Eagle (3 under):</strong> 5 points</li>
+                    <li><strong>Net Eagle (2 under):</strong> 4 points</li>
+                    <li><strong>Net Birdie (1 under):</strong> 3 points</li>
+                    <li><strong>Net Par (Even):</strong> 2 points</li>
+                    <li><strong>Net Bogey (1 over):</strong> 1 point</li>
+                    <li><strong>Net Double Bogey+ (2+ over):</strong> 0 points</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- HANDICAPS SECTION -->
+<div class="card">
+    <div class="card-header">
+        <h3>Player Handicaps</h3>
+    </div>
+    <div class="card-body">
+        <p>Handicaps are calculated dynamically based on your performance in stroke play rounds.</p>
+
+        <h4 style="margin-top: var(--space-6);">Establishment & Calculation</h4>
+        <ul style="list-style: none; padding: 0;">
+            <li
+                style="padding: var(--space-3) 0; padding-left: var(--space-6); border-left: 2px solid var(--color-primary-300); padding-left: var(--space-6);">
+                <strong>Establishing a Handicap:</strong> After your 3rd stroke play round, your first official Handicap
+                Index is automatically created.
+            </li>
+            <li
+                style="padding: var(--space-3) 0; padding-left: var(--space-6); border-left: 2px solid var(--color-primary-300);">
+                <strong>Updating:</strong> Your "Suggested Handicap" recalculates every time you add a round. Choose
+                when to officially update.
+            </li>
+            <li
+                style="padding: var(--space-3) 0; padding-left: var(--space-6); border-left: 2px solid var(--color-primary-300);">
+                <strong>Formula:</strong> We calculate your suggested handicap following official USGA guidelines. The
+                system uses the best differentials from your recent history and applies the 0.96 factor.
+            </li>
+            <li
+                style="padding: var(--space-3) 0; padding-left: var(--space-6); border-left: 2px solid var(--color-primary-300);">
+                <strong>Transparency:</strong> The Handicaps page shows the exact "Pool" of scores, the dates, and
+                identifies which rounds were paired vs 18-hole.
+            </li>
+        </ul>
+
+        <h4 style="margin-top: var(--space-6);">Rounds Used Tables</h4>
+        <p style="margin-bottom: var(--space-4);">The Handicaps page offers two suggested handicap options:</p>
+
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-6);">
+            <!-- USGA Table -->
+            <div class="table-wrap" style="flex: 1; min-width: 280px;">
+                <h5 style="margin-bottom: var(--space-3);">USGA Suggested</h5>
+                <p
+                    style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-3);">
+                    Official USGA guidelines - more restrictive</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Total Rounds</th>
+                            <th class="numeric">Best Used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 - 5</td>
+                            <td class="numeric">1</td>
+                        </tr>
+                        <tr>
+                            <td>6 - 8</td>
+                            <td class="numeric">2</td>
+                        </tr>
+                        <tr>
+                            <td>9 - 11</td>
+                            <td class="numeric">3</td>
+                        </tr>
+                        <tr>
+                            <td>12 - 14</td>
+                            <td class="numeric">4</td>
+                        </tr>
+                        <tr>
+                            <td>15 - 16</td>
+                            <td class="numeric">5</td>
+                        </tr>
+                        <tr>
+                            <td>17 - 18</td>
+                            <td class="numeric">6</td>
+                        </tr>
+                        <tr>
+                            <td>19</td>
+                            <td class="numeric">7</td>
+                        </tr>
+                        <tr>
+                            <td>20+</td>
+                            <td class="numeric">8</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- League Friendly Table -->
+            <div class="table-wrap" style="flex: 1; min-width: 280px;">
+                <h5 style="margin-bottom: var(--space-3);">League Friendly Suggested</h5>
+                <p
+                    style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-3);">
+                    More generous for short-season leagues</p>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Total Rounds</th>
+                            <th class="numeric">Best Used</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3 - 6</td>
+                            <td class="numeric">2</td>
+                        </tr>
+                        <tr>
+                            <td>7 - 8</td>
+                            <td class="numeric">3</td>
+                        </tr>
+                        <tr>
+                            <td>9 - 10</td>
+                            <td class="numeric">4</td>
+                        </tr>
+                        <tr>
+                            <td>11 - 12</td>
+                            <td class="numeric">5</td>
+                        </tr>
+                        <tr>
+                            <td>13 - 14</td>
+                            <td class="numeric">6</td>
+                        </tr>
+                        <tr>
+                            <td>15 - 16</td>
+                            <td class="numeric">7</td>
+                        </tr>
+                        <tr>
+                            <td>17 - 18</td>
+                            <td class="numeric">8</td>
+                        </tr>
+                        <tr>
+                            <td>19+</td>
+                            <td class="numeric">9-10</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="alert alert-info" style="margin-top: var(--space-6);">
+            <strong>Example Calculation (5 rounds):</strong>
+            <p style="margin: var(--space-2) 0;">Rounds: 85 (13.0), <strong>82 (10.0)</strong>, 88 (16.0), 84 (12.0),
+                <strong>81 (9.0)</strong>
+            </p>
+            <p style="margin: var(--space-2) 0;"><strong>USGA:</strong> Best 1 differential: 9.0 × 0.96 =
+                <strong>8.6</strong> Handicap Index
+            </p>
+            <p style="margin: var(--space-2) 0;"><strong>League Friendly:</strong> Best 2 differentials: (9.0 + 10.0) ÷
+                2 = 9.5 × 0.96 = <strong>9.1</strong> Handicap Index</p>
+        </div>
+
+        <div class="alert alert-warning" style="margin-top: var(--space-4);">
+            <strong>9-Hole Play (GHIN Style):</strong> 9-hole rounds are no longer "doubled." Instead, we use GHIN-style
+            pairing.
+            The system takes your 9-hole rounds (oldest first) and pairs them together to form a synthetic 18-hole
+            equivalent.
+            Only completed 18-hole equivalents are used in the differential pool for calculations. Any unpaired 9-hole
+            round sits as "pending" until your next 9.
+        </div>
+
+        <h4 style="margin-top: var(--space-6);">Substitute Policy</h4>
+        <p>A substitute player is not an active league member and does not earn or modify a handicap.
+            When a substitute is used, the team must select:
+
+            the player being replaced, and
+
+            whether the team handicap uses:
+
+            Proxy: the replaced player’s current handicap, or
+
+            Manual: the substitute’s commissioner-approved sub handicap.
+
+            The selected handicap applies only to that week and is recorded for transparency.
+            Sub participation does not affect season handicaps, standings, or future weeks.</p>
+    </div>
+</div>
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
+        </div>
+    </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    
+    const href = (a.getAttribute("href") || "").trim();
+    
+    // FIRST: Check for View Results exception by class
+    if(a.classList.contains("view-results-link")) {
+      return; // Allow View Results links to navigate
+    }
+    
+    // Allow per-week results pages (week_<n>.html pattern)
+    if(/^week_\d+\.html$/.test(href)) {
+      return; // Allow per-week results links
+    }
+    
+    // Allow player history links
+    if(/^player_history_\d+\.html$/.test(href)) {
+      return; 
+    }
+    
+    // Allow fallback week_results.html
+    if(href === "week_results.html") {
+      return; // Allow fallback results page
+    }
+    
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
+
+<script>
+(function(){
+  const nav = document.querySelector('nav.navbar');
+  const toggle = document.querySelector('.nav-toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+      const isOpen = nav.classList.contains('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+
+</html>

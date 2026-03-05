@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5">
+    <title>Aaron - Handicap History</title>
+
+    <!-- Design System: Tokens, Typography, Colors -->
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Components: Buttons, Cards, Forms, Tables, Badges -->
+    <link rel="stylesheet" href="components.css">
+
+    <!-- Page Layout: Navigation, Footer -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Landing Page Specific Styles (only on index.html) -->
+    
+
+    <!-- Responsive Overrides -->
+    <link rel="stylesheet" href="mobile.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="navbar-brand">
+                <a href="index.html" class="logo">Winter Golf League</a>
+            </div>
+            <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="players.html">Players</a></li>
+                <li><a href="weeks.html">Weeks</a></li>
+                <li><a href="leaderboard.html">Leaderboard</a></li>
+                <li><a href="handicaps.html">Handicaps</a></li>
+                <li><a href="coursepars.html">Course Pars</a></li>
+                <li><a href="#" class="disabled admin-only">Import (Admin only)</a></li>
+                <li><a href="allstats.html">Stats</a></li>
+                <li><a href="rules.html">Rules</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        
+        
+
+        
+
+<div class="page-header">
+    <div>
+        <h1>Aaron - Handicap History</h1>
+        <p class="text-muted" style="margin-top: 5px;">
+            Current Handicap:
+            <strong>
+                
+                4.9 (as of 2026-03-05)
+                
+            </strong>
+        </p>
+    </div>
+    <div class="header-actions">
+        <a href="handicaps.html" class="btn btn-secondary">&larr; Back to Handicaps</a>
+    </div>
+</div>
+
+<div class="card" style="margin-bottom: var(--space-8);">
+    <div class="card-header">
+        <h3>Handicap Trend</h3>
+    </div>
+    <div style="padding: var(--space-4); height: 300px; display: flex; align-items: center; justify-content: center;">
+        
+        <canvas id="handicapChart"></canvas>
+        
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h3>History Details</h3>
+    </div>
+    <div class="table-wrap">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th class="text-left">Date</th>
+                    <th class="numeric">Handicap Index</th>
+                    <th class="numeric">Rounds Used</th>
+                    <th class="text-left">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                
+                <tr>
+                    <td class="text-left">2026-03-05</td>
+                    <td class="numeric"><strong>4.9</strong></td>
+                    <td class="numeric">2</td>
+                    <td class="text-left text-muted-sm">
+                        
+                        <span class="badge badge-secondary">Override</span> System Correction (Differential Fix)
+                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td class="text-left">2026-01-23</td>
+                    <td class="numeric"><strong>9.7</strong></td>
+                    <td class="numeric">3</td>
+                    <td class="text-left text-muted-sm">
+                        
+                        System Calculation
+                        
+                    </td>
+                </tr>
+                
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const ctx = document.getElementById('handicapChart').getContext('2d');
+
+        // Parse backend data
+        const historyData = [
+            
+        {
+            date: '2026-01-23',
+            index: 9.7
+        }, 
+    
+        {
+            date: '2026-03-05',
+            index: 4.9
+        }
+    
+    ];
+
+    if (historyData.length === 0) return;
+
+    const labels = historyData.map(d => d.date);
+    const dataPoints = historyData.map(d => d.index);
+
+    // Make chart
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Handicap Index',
+                data: dataPoints,
+                borderColor: '#1e40af', // Primary 800
+                backgroundColor: 'rgba(30, 64, 175, 0.1)',
+                borderWidth: 2,
+                pointBackgroundColor: '#1e40af',
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                fill: true,
+                tension: 0.1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            return 'Index: ' + context.parsed.y;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false
+                    }
+                },
+                y: {
+                    suggestedMin: Math.max(0, Math.min(...dataPoints) - 2),
+                    suggestedMax: Math.max(...dataPoints) + 2,
+                }
+            }
+        }
+    });
+});
+</script>
+
+
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Winter Golf League System | Rules-Driven League Management</p>
+        </div>
+    </footer>
+
+<script>
+(function(){
+  const allowed = new Set([
+    "index.html","players.html","weeks.html","leaderboard.html",
+    "handicaps.html","coursepars.html","allstats.html","rules.html",
+    "week_results.html","#",""
+  ]);
+  document.addEventListener("click", function(e){
+    const a = e.target.closest("a");
+    if(!a) return;
+    
+    const href = (a.getAttribute("href") || "").trim();
+    
+    // FIRST: Check for View Results exception by class
+    if(a.classList.contains("view-results-link")) {
+      return; // Allow View Results links to navigate
+    }
+    
+    // Allow per-week results pages (week_<n>.html pattern)
+    if(/^week_\d+\.html$/.test(href)) {
+      return; // Allow per-week results links
+    }
+    
+    // Allow player history links
+    if(/^player_history_\d+\.html$/.test(href)) {
+      return; 
+    }
+    
+    // Allow fallback week_results.html
+    if(href === "week_results.html") {
+      return; // Allow fallback results page
+    }
+    
+    if (href.startsWith("/") || href.includes("localhost") || href.includes(":5000")) {
+      e.preventDefault(); a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && href.endsWith(".html") && !allowed.has(href)) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+      return;
+    }
+    if (!allowed.has(href) && !href.endsWith(".html")) {
+      e.preventDefault(); a.setAttribute("href","#");
+      a.classList.add("disabled","admin-only");
+      if(!a.textContent.includes("Admin")) a.textContent += " (Admin only)";
+    }
+  }, true);
+})();
+</script>
+
+<script>
+(function(){
+  const nav = document.querySelector('nav.navbar');
+  const toggle = document.querySelector('.nav-toggle');
+  if (nav && toggle) {
+    toggle.addEventListener('click', function() {
+      nav.classList.toggle('nav-open');
+      const isOpen = nav.classList.contains('nav-open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+})();
+</script>
+</body>
+
+</html>
